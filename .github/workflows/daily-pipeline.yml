@@ -1,0 +1,85 @@
+name: Daily pipeline
+# Cron is UTC. 06:00 UTC = 07:00 BST / 06:00 GMT. Adjust seasonally or run twice if a fixed local time matters.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Comma-separated source keys (blank = all)"
+        required: false
+        default: ""
+      notify:
+        description: "Send Telegram digest"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DATABASE_URL: sqlite:///${{ github.workspace }}/data/uk_etdi.db
+      TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+      EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+      JAMBASE_API_KEY: ${{ secrets.JAMBASE_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      GOOGLE_SHEETS_WEBHOOK: ${{ secrets.GOOGLE_SHEETS_WEBHOOK }}
+      APP_ENV: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      # Zero-cost persistence: the SQLite DB is versioned in the repo's `data` branch (see docs/DEPLOYMENT.md).
+      - name: Restore database from data branch
+        run: |
+          git fetch origin data:data 2>/dev/null && git show data:uk_etdi.db > data/uk_etdi.db && echo "restored" || echo "no previous database"
+
+      - name: Run migrations
+        run: python scripts/migrate.py
+
+      - name: Collect → process → score → report → notify
+        run: |
+          ARGS="--trigger scheduled --report"
+          [ -n "${{ github.event.inputs.sources }}" ] && ARGS="$ARGS --sources ${{ github.event.inputs.sources }}"
+          [ "${{ github.event.inputs.notify }}" = "false" ] && ARGS="$ARGS --no-notify"
+          python scripts/run_pipeline.py $ARGS | tee data/last_run.log
+
+      - name: Export API snapshot for static hosting
+        run: python scripts/export_static.py
+
+      - name: Persist database to data branch
+        run: |
+          git config user.name "uk-etdi-bot"; git config user.email "bot@users.noreply.github.com"
+          TMP=$(mktemp -d); cp data/uk_etdi.db "$TMP/"; cp -r data/export "$TMP/" 2>/dev/null || true
+          git checkout --orphan data-tmp; git rm -rf . >/dev/null 2>&1 || true
+          cp "$TMP/uk_etdi.db" .; cp -r "$TMP/export" . 2>/dev/null || true
+          git add -A; git commit -m "data: $(date -u +%FT%TZ)" >/dev/null
+          git branch -M data-tmp data; git push -f origin data
+
+      # Free-tier hosts have ephemeral disks: trigger a redeploy so the running API restarts with the fresh DB.
+      - name: Redeploy hosted API (optional)
+        if: always()
+        env: { HOOK: ${{ secrets.DEPLOY_HOOK_URL }} }
+        run: '[ -n "$HOOK" ] && curl -fsS -X POST "$HOOK" >/dev/null && echo "deploy hook called" || echo "no DEPLOY_HOOK_URL secret — skipped"'
+
+      - name: Upload logs & artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-${{ github.run_id }}
+          path: |
+            data/last_run.log
+            data/export
+          retention-days: 14

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK-ETDI · Taxi Marketing Command Center</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚕</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">🚕</span><div><b>UK-ETDI</b><small>Taxi Marketing Command Center</small></div></div>
+    <nav id="nav">
+      <a href="#/" data-route="/">🏠 Home</a>
+      <a href="#/map" data-route="/map">🗺️ Map</a>
+      <a href="#/events" data-route="/events">📋 Event Feed</a>
+      <a href="#/opportunities" data-route="/opportunities">🔥 Opportunities</a>
+      <a href="#/actions" data-route="/actions">🎯 Marketing Actions</a>
+      <a href="#/calendar" data-route="/calendar">📅 Calendar</a>
+      <a href="#/analytics" data-route="/analytics">📈 Analytics</a>
+      <a href="#/changes" data-route="/changes">🔁 Changes</a>
+      <a href="#/coverage" data-route="/coverage">📡 Coverage</a>
+      <a href="#/quality" data-route="/quality">✅ Data Quality</a>
+      <a href="#/sources" data-route="/sources">🔌 Sources</a>
+      <a href="#/system" data-route="/system">🩺 System</a>
+      <a href="#/settings" data-route="/settings">⚙️ Settings</a>
+    </nav>
+    <div class="sidebar-foot">
+      <button id="run-pipeline" class="btn btn-primary btn-block">▶ Run pipeline now</button>
+      <div id="pipeline-status" class="muted small"></div>
+      <div class="muted small">Scores &amp; windows are <b>modelled</b>, not observed demand.</div>
+    </div>
+  </aside>
+  <main id="view" class="view"><div class="loading">Loading…</div></main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script type="module" src="/lib/app.js"></script>
+</body>
+</html>

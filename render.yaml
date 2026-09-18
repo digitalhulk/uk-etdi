@@ -1,0 +1,28 @@
+# Render Blueprint — free web service (£0). Deploy: Render dashboard → New → Blueprint → pick this repo.
+services:
+  - type: web
+    name: uk-etdi
+    runtime: docker
+    plan: free
+    region: frankfurt          # closest free region to the UK
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: API_ADMIN_TOKEN
+        generateValue: true    # Render generates a strong secret; read it in Environment tab
+      # Public raw URL of the SQLite DB the GitHub Actions pipeline pushes to the `data` branch.
+      # Replace OWNER/REPO. For a PRIVATE repo use a raw URL with a token or make the data branch public.
+      - key: DATA_BRANCH_URL
+        value: https://raw.githubusercontent.com/OWNER/REPO/data/uk_etdi.db
+      # Optional — leave blank to keep those sources DISABLED
+      - key: TICKETMASTER_API_KEY
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      # In-process scheduler off: the daily run happens in GitHub Actions (free instance sleeps when idle)
+      - key: SCHEDULER_ENABLED
+        value: "0"

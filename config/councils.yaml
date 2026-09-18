@@ -1,0 +1,124 @@
+# Councils and tourism boards (DMOs). Only public event calendars / feeds are used.
+# verification_status: ACTIVE (measured events on 2026-09-18), EMPTY (reachable, 0 structured events),
+# BLOCKED (403/bot protection — never retried automatically), UNVERIFIED (no structured endpoint found).
+# Fields: council, kind (council|tourism), city, region, events_url / calendar_url (JSON-LD), ical_url, rss_url,
+#         json_url (WordPress "The Events Calendar" REST), enabled, verification_status, notes.
+councils:
+  # ---- tourism boards / DMOs ----
+  - council: Experience Oxfordshire
+    kind: tourism
+    city: Oxford
+    region: South East
+    events_url: https://www.experienceoxfordshire.org/whats-on/list/
+    page_pattern: "https://www.experienceoxfordshire.org/whats-on/list/page/{n}/"
+    max_listing_pages: 12          # 20 JSON-LD events per page, sorted by date; robots Crawl-delay 3s honoured
+    category_hint: "fallback:community"   # only used when the title matches no keyword rule
+    enabled: true
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+    notes: "JSON-LD on paginated HTML listing. robots.txt disallows '/*?' so the tribe REST API and ?ical=1 endpoints are NOT used."
+  - council: NewcastleGateshead Initiative
+    kind: tourism
+    city: Newcastle upon Tyne
+    region: North East
+    events_url: https://newcastlegateshead.com/whats-on
+    enabled: true
+    verification_status: UNVERIFIED
+    last_probed: 2026-09-18
+    notes: "Listing page exposed 1 JSON-LD Event on probe; low yield."
+  - council: Visit Leeds
+    kind: tourism
+    city: Leeds
+    region: Yorkshire
+    events_url: https://www.visitleeds.co.uk/whats-on/
+    enabled: false
+    verification_status: EMPTY
+    notes: "Simpleview CMS, JS rendered, no JSON-LD / feed."
+  - council: Visit London
+    kind: tourism
+    city: London
+    region: London
+    enabled: false
+    verification_status: BLOCKED
+    notes: "403 to automated clients; not retried."
+  - council: Visit Wales
+    kind: tourism
+    city: Cardiff
+    region: Wales
+    enabled: false
+    verification_status: BLOCKED
+  - council: Visit Liverpool
+    kind: tourism
+    city: Liverpool
+    region: North West
+    enabled: false
+    verification_status: UNVERIFIED
+    notes: "Redirect loop on probe."
+  - council: Visit Nottinghamshire
+    kind: tourism
+    city: Nottingham
+    region: East Midlands
+    enabled: false
+    verification_status: UNVERIFIED
+    notes: "Connection error on probe."
+  # ---- councils (no structured public calendars discovered; registered for coverage-gap reporting only) ----
+  - council: Manchester City Council
+    kind: council
+    city: Manchester
+    region: North West
+    enabled: false
+    verification_status: BLOCKED
+  - council: Glasgow City Council
+    kind: council
+    city: Glasgow
+    region: Scotland
+    enabled: false
+    verification_status: BLOCKED
+  - council: City of Edinburgh Council
+    kind: council
+    city: Edinburgh
+    region: Scotland
+    enabled: false
+    verification_status: BLOCKED
+  - council: Birmingham City Council
+    kind: council
+    city: Birmingham
+    region: West Midlands
+    enabled: false
+    verification_status: BLOCKED
+  - council: Cardiff Council
+    kind: council
+    city: Cardiff
+    region: Wales
+    enabled: false
+    verification_status: BLOCKED
+  - council: Leeds City Council
+    kind: council
+    city: Leeds
+    region: Yorkshire
+    enabled: false
+    verification_status: UNVERIFIED
+  - council: Bristol City Council
+    kind: council
+    city: Bristol
+    region: South West
+    enabled: false
+    verification_status: UNVERIFIED
+  - council: Belfast City Council
+    kind: council
+    city: Belfast
+    region: Northern Ireland
+    enabled: false
+    verification_status: UNVERIFIED
+
+  - council: Visit Leicester
+    kind: tourism
+    city: Leicester
+    region: East Midlands
+    wp_json_url: https://www.visitleicester.info/wp-json/wp/v2/event
+    max_wp_items: 80
+    category_hint: "fallback:community"
+    enabled: true
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+    notes: "Public WordPress REST index (1,000+ event posts); each event page has schema.org Event JSON-LD with venue/postcode."

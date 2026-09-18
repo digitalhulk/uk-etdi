@@ -1,0 +1,30 @@
+# Fly.io alternative (free allowance). `fly launch --copy-config --no-deploy && fly volumes create etdi_data -s 1 && fly deploy`
+app = "uk-etdi"
+primary_region = "lhr"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  APP_ENV = "production"
+  PORT = "8000"
+  DB_PATH = "/data/uk_etdi.db"
+  SCHEDULER_ENABLED = "1"          # volume is persistent → the in-process daily scheduler can run here
+  SCHEDULER_INTERVAL_MINUTES = "1440"
+
+[mounts]
+  source = "etdi_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[http_service.checks]]
+  interval = "60s"
+  timeout = "5s"
+  method = "GET"
+  path = "/api/health"

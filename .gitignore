@@ -1,0 +1,8 @@
+.env
+data/*.db*
+data/export/
+data/last_run.log
+__pycache__/
+.pytest_cache/
+*.pyc
+uploads/

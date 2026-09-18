@@ -1,0 +1,168 @@
+# Source registry. Each key maps to a collector in backend/app/collectors/registry.py
+# Collectors requiring an API key auto-report DISABLED when the key is missing.
+# Outbound SSRF allowlist (suffix match). Add a domain here before adding its feed/page. Private/loopback ranges are always refused.
+allowed_domains:
+  - fixturedownload.com
+  - thejockeyclub.co.uk
+  - theo2.co.uk
+  - ao-arena.com
+  - firstdirectarena.com
+  - firstdirectbankarena.com
+  - utilitaarena.co.uk
+  - utilitaarenabham.co.uk
+  - utilitaarena.com
+  - ovoarena.co.uk
+  - experienceoxfordshire.org
+  - newcastlegateshead.com
+  - app.ticketmaster.com
+  - www.eventbriteapi.com
+  - www.jambase.com
+  - nimaxtheatres.com
+  - visitleicester.info
+  - lyceum.org.uk
+  - dundeerep.co.uk
+  - bmusic.co.uk
+  - oxfordplayhouse.com
+  - talks.cam.ac.uk
+  - abdn.ac.uk
+  - troxy.co.uk
+  - eden-court.co.uk
+  - hallforcornwall.co.uk
+  - theatreroyalwindsor.co.uk
+  - visitleeds.co.uk
+  - alexandrapalace.com
+  - api.postcodes.io
+  - ac.uk
+  - gov.uk
+  - sch.uk
+
+sources:
+  ticketmaster:
+    enabled: true
+    type: api
+    priority: 100
+    requires_key: TICKETMASTER_API_KEY
+    docs_url: https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+    country_code: GB
+    page_size: 200
+    max_pages: 5
+    days_ahead: 60
+
+  eventbrite:
+    enabled: true
+    type: api
+    priority: 90
+    requires_key: EVENTBRITE_API_KEY
+    docs_url: https://www.eventbrite.com/platform/api#/reference/event/list/list-events-by-organization
+    note: "Eventbrite public search API is restricted; connector uses organisation events endpoint when token present."
+
+  jambase:
+    enabled: true
+    type: api_or_public
+    priority: 70
+    requires_key: JAMBASE_API_KEY
+    docs_url: https://apidocs.jambase.com/
+
+  # Official/public fixture feeds (no key). JSON fixture lists published by fixturedownload.com
+  football_fixtures:
+    enabled: true
+    type: official
+    priority: 85
+    feeds:
+      - name: Premier League
+        url: https://fixturedownload.com/feed/json/epl-2026
+        competition: Premier League
+        sport: football
+      - name: Championship
+        url: https://fixturedownload.com/feed/json/championship-2026
+        competition: EFL Championship
+        sport: football
+      - name: Premiership Rugby
+        url: https://fixturedownload.com/feed/json/premiership-rugby-2026
+        competition: Premiership Rugby
+        sport: rugby
+      - name: Scottish Premiership
+        url: https://fixturedownload.com/feed/json/scottish-premiership-2026
+        competition: Scottish Premiership
+        sport: football
+      - name: Women's Super League
+        url: https://fixturedownload.com/feed/json/wsl-2026
+        competition: Women's Super League
+        sport: football
+      - name: UEFA Champions League
+        url: https://fixturedownload.com/feed/json/champions-league-2026
+        competition: UEFA Champions League
+        sport: football
+        uk_only: true
+      - name: UEFA Europa League (UK venues)
+        url: https://fixturedownload.com/feed/json/europa-league-2026
+        competition: UEFA Europa League
+        sport: football
+        uk_only: true
+      - name: UEFA Conference League (UK venues)
+        url: https://fixturedownload.com/feed/json/conference-league-2026
+        competition: UEFA Conference League
+        sport: football
+        uk_only: true
+      - name: UEFA Nations League (UK venues)
+        url: https://fixturedownload.com/feed/json/nations-league-2026
+        competition: UEFA Nations League
+        sport: football
+        uk_only: true
+      - name: Rugby Nations Championship (UK venues)
+        url: https://fixturedownload.com/feed/json/nations-championship-2026
+        competition: Nations Championship
+        sport: rugby
+        uk_only: true
+
+  # Generic iCal / RSS feeds (councils, universities, venues). Add public feed URLs here.
+  ical_feeds:
+    enabled: true
+    type: feed
+    priority: 60
+    feeds: []
+
+  rss_feeds:
+    enabled: true
+    type: feed
+    priority: 50
+    feeds: []
+
+  # Public venue pages exposing schema.org JSON-LD Event data. robots.txt is checked per request.
+  venue_pages:
+    enabled: true
+    type: web
+    priority: 80
+    pages: []   # legacy inline list; prefer config/venues.yaml (official_events_url / events_json_url / ical_url / rss_url)
+
+  # Institutions from config/institutions.yaml (registry-only; public calendars only)
+  universities:
+    enabled: true
+    type: web
+    priority: 65
+  colleges:
+    enabled: true
+    type: web
+    priority: 55
+  schools:
+    enabled: true
+    type: web
+    priority: 45
+    min_school_event_confidence: MEDIUM
+
+  # Councils and tourism boards from config/councils.yaml
+  councils:
+    enabled: true
+    type: web
+    priority: 60
+  tourism:
+    enabled: true
+    type: web
+    priority: 62
+
+  # Local curated file for manually verified official events (e.g. graduations, freshers weeks).
+  curated:
+    enabled: true
+    type: file
+    priority: 40
+    path: data/curated_events.json

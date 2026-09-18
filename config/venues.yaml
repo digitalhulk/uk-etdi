@@ -1,0 +1,1509 @@
+# Venue intelligence seed. Capacities are official/published figures (source noted). Never invent capacity.
+# station_distance_km / airport_distance_km: approximate straight-line distances from public map data.
+venues:
+  - name: Wembley Stadium
+    aliases: [Wembley]
+    city: London
+    postcode: HA9 0WS
+    latitude: 51.5560
+    longitude: -0.2796
+    capacity: 90000
+    capacity_source: "wembleystadium.com"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 16
+  - name: The O2
+    aliases: [O2 Arena, The O2 Arena]
+    city: London
+    postcode: SE10 0DX
+    latitude: 51.5030
+    longitude: 0.0032
+    capacity: 20000
+    capacity_source: "theo2.co.uk"
+    venue_type: arena
+    station_distance_km: 0.2
+    airport_distance_km: 5
+    official_website: https://www.theo2.co.uk
+    official_events_url: https://www.theo2.co.uk/events/
+    detail_pattern: /events/detail/
+    max_detail_pages: 20
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Tottenham Hotspur Stadium
+    city: London
+    postcode: N17 0BX
+    latitude: 51.6043
+    longitude: -0.0665
+    capacity: 62850
+    capacity_source: "tottenhamhotspur.com"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 22
+  - name: Emirates Stadium
+    city: London
+    postcode: N5 1BU
+    latitude: 51.5549
+    longitude: -0.1084
+    capacity: 60704
+    capacity_source: "arsenal.com"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 20
+  - name: Stamford Bridge
+    city: London
+    postcode: SW6 1HS
+    latitude: 51.4817
+    longitude: -0.1910
+    capacity: 40341
+    capacity_source: "chelseafc.com"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 18
+  - name: London Stadium
+    city: London
+    postcode: E20 2ST
+    latitude: 51.5387
+    longitude: -0.0166
+    capacity: 62500
+    capacity_source: "london-stadium.com"
+    venue_type: stadium
+    station_distance_km: 0.9
+    airport_distance_km: 9
+  - name: Craven Cottage
+    city: London
+    postcode: SW6 6HH
+    latitude: 51.4749
+    longitude: -0.2217
+    capacity: 29600
+    capacity_source: "fulhamfc.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 16
+  - name: Selhurst Park
+    city: London
+    postcode: SE25 6PU
+    latitude: 51.3983
+    longitude: -0.0855
+    capacity: 25486
+    capacity_source: "cpfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 24
+  - name: Gtech Community Stadium
+    city: London
+    postcode: TW8 0RU
+    latitude: 51.4907
+    longitude: -0.2886
+    capacity: 17250
+    capacity_source: "brentfordfc.com"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 12
+  - name: Brentford Community Stadium
+    aliases: [Gtech Community Stadium]
+    city: London
+    postcode: TW8 0RU
+    latitude: 51.4907
+    longitude: -0.2886
+    capacity: 17250
+    capacity_source: "brentfordfc.com"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 12
+  - name: The Den
+    city: London
+    postcode: SE16 3LN
+    latitude: 51.4859
+    longitude: -0.0509
+    capacity: 20146
+    capacity_source: "millwallfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 12
+  - name: Loftus Road
+    aliases: [MATRADE Loftus Road Stadium]
+    city: London
+    postcode: W12 7PJ
+    latitude: 51.5093
+    longitude: -0.2322
+    capacity: 18439
+    capacity_source: "qpr.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 15
+  - name: Royal Albert Hall
+    city: London
+    postcode: SW7 2AP
+    latitude: 51.5009
+    longitude: -0.1774
+    capacity: 5272
+    capacity_source: "royalalberthall.com"
+    venue_type: concert_hall
+    station_distance_km: 0.6
+    airport_distance_km: 20
+  - name: OVO Arena Wembley
+    aliases: [Wembley Arena, SSE Arena Wembley]
+    city: London
+    postcode: HA9 0AA
+    latitude: 51.5581
+    longitude: -0.2828
+    capacity: 12500
+    capacity_source: "ovoarena.co.uk"
+    venue_type: arena
+    station_distance_km: 0.5
+    airport_distance_km: 16
+    official_website: https://www.ovoarena.co.uk
+    official_events_url: https://www.ovoarena.co.uk/events
+    detail_pattern: /events/detail/
+    max_detail_pages: 20
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Twickenham Stadium
+    aliases: [Allianz Stadium Twickenham, Twickenham, Allianz Stadium]
+    city: London
+    postcode: TW2 7BA
+    latitude: 51.4559
+    longitude: -0.3415
+    capacity: 82000
+    capacity_source: "englandrugby.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 8
+  - name: Old Trafford
+    city: Manchester
+    postcode: M16 0RA
+    latitude: 53.4631
+    longitude: -2.2913
+    capacity: 74310
+    capacity_source: "manutd.com"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 13
+  - name: Etihad Stadium
+    city: Manchester
+    postcode: M11 3FF
+    latitude: 53.4831
+    longitude: -2.2004
+    capacity: 53400
+    capacity_source: "mancity.com"
+    venue_type: stadium
+    station_distance_km: 0.2
+    airport_distance_km: 16
+  - name: AO Arena
+    aliases: [Manchester Arena, Manchester AO Arena]
+    city: Manchester
+    postcode: M3 1AR
+    latitude: 53.4882
+    longitude: -2.2437
+    capacity: 23000
+    capacity_source: "ao-arena.com"
+    venue_type: arena
+    station_distance_km: 0.1
+    airport_distance_km: 15
+    official_website: https://www.ao-arena.com
+    official_events_url: https://www.ao-arena.com/events
+    detail_pattern: /events/detail/
+    max_detail_pages: 20
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Co-op Live
+    city: Manchester
+    postcode: M11 3DU
+    latitude: 53.4846
+    longitude: -2.1987
+    capacity: 23500
+    capacity_source: "cooplive.com"
+    venue_type: arena
+    station_distance_km: 0.3
+    airport_distance_km: 16
+  - name: Anfield
+    city: Liverpool
+    postcode: L4 0TH
+    latitude: 53.4308
+    longitude: -2.9608
+    capacity: 61276
+    capacity_source: "liverpoolfc.com"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 13
+  - name: Hill Dickinson Stadium
+    aliases: [Everton Stadium, Bramley-Moore Dock Stadium]
+    city: Liverpool
+    postcode: L3 0AP
+    latitude: 53.4278
+    longitude: -3.0004
+    capacity: 52888
+    capacity_source: "evertonfc.com"
+    venue_type: stadium
+    station_distance_km: 1.8
+    airport_distance_km: 14
+  - name: Goodison Park
+    city: Liverpool
+    postcode: L4 4EL
+    latitude: 53.4388
+    longitude: -2.9663
+    capacity: 39414
+    capacity_source: "evertonfc.com"
+    venue_type: stadium
+    station_distance_km: 2.0
+    airport_distance_km: 14
+  - name: M&S Bank Arena
+    aliases: [Liverpool Arena, Echo Arena]
+    city: Liverpool
+    postcode: L3 4FP
+    latitude: 53.3966
+    longitude: -2.9922
+    capacity: 11000
+    capacity_source: "mandsbankarena.com"
+    venue_type: arena
+    station_distance_km: 0.8
+    airport_distance_km: 11
+  - name: Villa Park
+    city: Birmingham
+    postcode: B6 6HE
+    latitude: 52.5092
+    longitude: -1.8848
+    capacity: 42918
+    capacity_source: "avfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 12
+  - name: St Andrew's
+    aliases: [St. Andrew's @ Knighthead Park, St Andrew's Stadium]
+    city: Birmingham
+    postcode: B9 4RL
+    latitude: 52.4757
+    longitude: -1.8683
+    capacity: 29409
+    capacity_source: "bcfc.com"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 10
+  - name: Utilita Arena Birmingham
+    aliases: [Arena Birmingham, Birmingham Arena]
+    city: Birmingham
+    postcode: B1 2AA
+    latitude: 52.4796
+    longitude: -1.9146
+    capacity: 15800
+    capacity_source: "utilitaarenabham.co.uk"
+    venue_type: arena
+    station_distance_km: 0.5
+    airport_distance_km: 14
+    official_website: https://www.utilitaarenabham.co.uk
+    official_events_url: https://www.utilitaarenabham.co.uk/events
+    detail_pattern: /events/detail/
+    max_detail_pages: 10
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: bp pulse LIVE
+    aliases: [Resorts World Arena, NEC Arena]
+    city: Birmingham
+    postcode: B40 1NT
+    latitude: 52.4478
+    longitude: -1.7183
+    capacity: 15685
+    capacity_source: "bppulselive.co.uk"
+    venue_type: arena
+    station_distance_km: 0.5
+    airport_distance_km: 1
+  - name: Elland Road
+    city: Leeds
+    postcode: LS11 0ES
+    latitude: 53.7778
+    longitude: -1.5721
+    capacity: 37608
+    capacity_source: "leedsunited.com"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 14
+  - name: First Direct Arena
+    aliases: [Leeds Arena, first direct arena]
+    city: Leeds
+    postcode: LS2 8BY
+    latitude: 53.8027
+    longitude: -1.5417
+    capacity: 13781
+    capacity_source: "firstdirectarena.com"
+    venue_type: arena
+    station_distance_km: 1.0
+    airport_distance_km: 12
+    official_website: https://www.firstdirectbankarena.com
+    official_events_url: https://www.firstdirectbankarena.com/events/
+    detail_pattern: /events/detail/
+    max_detail_pages: 20
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: St James' Park
+    aliases: [St. James' Park]
+    city: Newcastle upon Tyne
+    postcode: NE1 4ST
+    latitude: 54.9756
+    longitude: -1.6217
+    capacity: 52305
+    capacity_source: "nufc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.7
+    airport_distance_km: 9
+  - name: Utilita Arena Newcastle
+    aliases: [Newcastle Arena]
+    city: Newcastle upon Tyne
+    postcode: NE4 7NA
+    latitude: 54.9647
+    longitude: -1.6252
+    capacity: 11000
+    capacity_source: "utilitaarena.co.uk"
+    venue_type: arena
+    station_distance_km: 0.6
+    airport_distance_km: 10
+    official_website: https://www.utilitaarena.com
+    official_events_url: https://www.utilitaarena.com/events
+    detail_pattern: /events/detail/
+    max_detail_pages: 10
+    category_hint: "fallback:concert"
+    source_priority: 80
+    enabled: false                  # TLS handshake fails from automated clients (2026-09-18); 0 JSON-LD events when reachable
+    verification_status: UNVERIFIED
+    last_probed: 2026-09-18
+  - name: Stadium of Light
+    city: Sunderland
+    postcode: SR5 1SU
+    latitude: 54.9144
+    longitude: -1.3882
+    capacity: 48707
+    capacity_source: "safc.com"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 20
+  - name: Bramall Lane
+    city: Sheffield
+    postcode: S2 4SU
+    latitude: 53.3703
+    longitude: -1.4708
+    capacity: 32050
+    capacity_source: "sufc.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.2
+    airport_distance_km: 40
+  - name: Hillsborough
+    aliases: [Hillsborough Stadium]
+    city: Sheffield
+    postcode: S6 1SW
+    latitude: 53.4114
+    longitude: -1.5007
+    capacity: 39732
+    capacity_source: "swfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 4.5
+    airport_distance_km: 42
+  - name: Utilita Arena Sheffield
+    aliases: [Sheffield Arena]
+    city: Sheffield
+    postcode: S9 2DF
+    latitude: 53.3924
+    longitude: -1.4289
+    capacity: 13600
+    capacity_source: "utilitaarenasheffield.co.uk"
+    venue_type: arena
+    station_distance_km: 2.5
+    airport_distance_km: 40
+    official_website: https://www.utilitaarena.co.uk
+    official_events_url: https://www.utilitaarena.co.uk/events
+    detail_pattern: /events/detail/
+    max_detail_pages: 20
+    category_hint: "fallback:concert"
+    source_priority: 80
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Ashton Gate
+    aliases: [Ashton Gate Stadium]
+    city: Bristol
+    postcode: BS3 2EJ
+    latitude: 51.4400
+    longitude: -2.6203
+    capacity: 27000
+    capacity_source: "ashtongatestadium.co.uk"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 10
+  - name: City Ground
+    aliases: [The City Ground]
+    city: Nottingham
+    postcode: NG2 5FJ
+    latitude: 52.9399
+    longitude: -1.1328
+    capacity: 30404
+    capacity_source: "nottinghamforest.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.2
+    airport_distance_km: 20
+  - name: Motorpoint Arena Nottingham
+    aliases: [Nottingham Arena]
+    city: Nottingham
+    postcode: NG1 1LA
+    latitude: 52.9506
+    longitude: -1.1409
+    capacity: 10000
+    capacity_source: "motorpointarenanottingham.com"
+    venue_type: arena
+    station_distance_km: 0.5
+    airport_distance_km: 20
+  - name: King Power Stadium
+    city: Leicester
+    postcode: LE2 7FL
+    latitude: 52.6204
+    longitude: -1.1422
+    capacity: 32259
+    capacity_source: "lcfc.com"
+    venue_type: stadium
+    station_distance_km: 1.7
+    airport_distance_km: 32
+  - name: St Mary's Stadium
+    aliases: [St. Mary's Stadium]
+    city: Southampton
+    postcode: SO14 5FP
+    latitude: 50.9058
+    longitude: -1.3911
+    capacity: 32384
+    capacity_source: "southamptonfc.com"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 6
+  - name: American Express Stadium
+    aliases: [Amex Stadium, Falmer Stadium, American Express Community Stadium]
+    city: Brighton
+    postcode: BN1 9BL
+    latitude: 50.8616
+    longitude: -0.0837
+    capacity: 31876
+    capacity_source: "brightonandhovealbion.com"
+    venue_type: stadium
+    station_distance_km: 0.2
+    airport_distance_km: 35
+  - name: Molineux Stadium
+    aliases: [Molineux]
+    city: Wolverhampton
+    postcode: WV1 4QR
+    latitude: 52.5903
+    longitude: -2.1304
+    capacity: 31750
+    capacity_source: "wolves.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 25
+  - name: Turf Moor
+    city: Burnley
+    postcode: BB10 4BX
+    latitude: 53.7890
+    longitude: -2.2302
+    capacity: 21944
+    capacity_source: "burnleyfootballclub.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 40
+  - name: Vitality Stadium
+    aliases: [Dean Court]
+    city: Bournemouth
+    postcode: BH7 7AF
+    latitude: 50.7352
+    longitude: -1.8384
+    capacity: 11307
+    capacity_source: "afcb.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 8
+  - name: Cardiff City Stadium
+    city: Cardiff
+    postcode: CF11 8AZ
+    latitude: 51.4728
+    longitude: -3.2031
+    capacity: 33280
+    capacity_source: "cardiffcityfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 15
+  - name: Principality Stadium
+    aliases: [Millennium Stadium]
+    city: Cardiff
+    postcode: CF10 1NS
+    latitude: 51.4782
+    longitude: -3.1826
+    capacity: 73931
+    capacity_source: "principalitystadium.wales"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 16
+  - name: Swansea.com Stadium
+    aliases: [Liberty Stadium]
+    city: Swansea
+    postcode: SA1 2FA
+    latitude: 51.6428
+    longitude: -3.9347
+    capacity: 21088
+    capacity_source: "swanseacity.com"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 60
+  - name: OVO Hydro
+    aliases: [SSE Hydro, The Hydro]
+    city: Glasgow
+    postcode: G3 8YW
+    latitude: 55.8602
+    longitude: -4.2851
+    capacity: 14300
+    capacity_source: "ovohydro.com"
+    venue_type: arena
+    station_distance_km: 0.5
+    airport_distance_km: 11
+  - name: Coventry Building Society Arena
+    aliases: [Ricoh Arena, CBS Arena]
+    city: Coventry
+    postcode: CV6 6GE
+    latitude: 52.4481
+    longitude: -1.4956
+    capacity: 32609
+    capacity_source: "cbsarena.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 18
+  - name: Pride Park Stadium
+    aliases: [Pride Park]
+    city: Derby
+    postcode: DE24 8XL
+    latitude: 52.9150
+    longitude: -1.4472
+    capacity: 32956
+    capacity_source: "dcfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 15
+  - name: bet365 Stadium
+    city: Stoke-on-Trent
+    postcode: ST4 4EG
+    latitude: 52.9884
+    longitude: -2.1755
+    capacity: 30089
+    capacity_source: "stokecityfc.com"
+    venue_type: stadium
+    station_distance_km: 2.0
+    airport_distance_km: 40
+  - name: MKM Stadium
+    city: Hull
+    postcode: HU3 6HU
+    latitude: 53.7462
+    longitude: -0.3678
+    capacity: 25586
+    capacity_source: "wearehullcity.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 30
+  - name: Riverside Stadium
+    city: Middlesbrough
+    postcode: TS3 6RS
+    latitude: 54.5783
+    longitude: -1.2169
+    capacity: 34742
+    capacity_source: "mfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 20
+  - name: Carrow Road
+    city: Norwich
+    postcode: NR1 1JE
+    latitude: 52.6222
+    longitude: 1.3091
+    capacity: 27359
+    capacity_source: "canaries.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 6
+  - name: Portman Road
+    city: Ipswich
+    postcode: IP1 2DA
+    latitude: 52.0550
+    longitude: 1.1447
+    capacity: 29813
+    capacity_source: "itfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 45
+  - name: Fratton Park
+    city: Portsmouth
+    postcode: PO4 8RA
+    latitude: 50.7964
+    longitude: -1.0639
+    capacity: 20899
+    capacity_source: "portsmouthfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 25
+  - name: Deepdale
+    city: Preston
+    postcode: PR1 6RU
+    latitude: 53.7722
+    longitude: -2.6881
+    capacity: 23404
+    capacity_source: "pnefc.net"
+    venue_type: stadium
+    station_distance_km: 2.0
+    airport_distance_km: 45
+  - name: Ewood Park
+    city: Blackburn
+    postcode: BB2 4JF
+    latitude: 53.7286
+    longitude: -2.4892
+    capacity: 31367
+    capacity_source: "rovers.co.uk"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 45
+  - name: Vicarage Road
+    city: Watford
+    postcode: WD18 0ER
+    latitude: 51.6498
+    longitude: -0.4015
+    capacity: 22200
+    capacity_source: "watfordfc.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 20
+  - name: Kenilworth Road
+    city: Luton
+    postcode: LU4 8AW
+    latitude: 51.8842
+    longitude: -0.4316
+    capacity: 12000
+    capacity_source: "lutontown.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.2
+    airport_distance_km: 4
+  - name: Select Car Leasing Stadium
+    aliases: [Madejski Stadium]
+    city: Reading
+    postcode: RG2 0FL
+    latitude: 51.4222
+    longitude: -0.9828
+    capacity: 24161
+    capacity_source: "readingfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 4.0
+    airport_distance_km: 40
+  - name: Home Park
+    city: Plymouth
+    postcode: PL2 3DQ
+    latitude: 50.3881
+    longitude: -4.1509
+    capacity: 17900
+    capacity_source: "pafc.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.2
+    airport_distance_km: 60
+  - name: Kingsholm Stadium
+    aliases: [Kingsholm]
+    city: Gloucester
+    postcode: GL1 3AX
+    latitude: 51.8712
+    longitude: -2.2431
+    capacity: 16115
+    capacity_source: "gloucesterrugby.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 50
+  - name: Recreation Ground
+    aliases: [The Rec]
+    city: Bath
+    postcode: BA2 6PW
+    latitude: 51.3820
+    longitude: -2.3540
+    capacity: 14509
+    capacity_source: "bathrugby.com"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 25
+  - name: Sandy Park
+    city: Exeter
+    postcode: EX2 7NN
+    latitude: 50.7090
+    longitude: -3.4680
+    capacity: 15600
+    capacity_source: "exeterchiefs.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 3
+  - name: Welford Road
+    aliases: [Mattioli Woods Welford Road]
+    city: Leicester
+    postcode: LE2 7TR
+    latitude: 52.6242
+    longitude: -1.1330
+    capacity: 25849
+    capacity_source: "leicestertigers.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 32
+  - name: Franklin's Gardens
+    aliases: [cinch Stadium at Franklin's Gardens]
+    city: Northampton
+    postcode: NN5 5BG
+    latitude: 52.2404
+    longitude: -0.9170
+    capacity: 15249
+    capacity_source: "northamptonsaints.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 45
+  - name: Salford Community Stadium
+    aliases: [AJ Bell Stadium, CorpAcq Stadium]
+    city: Sale
+    postcode: M30 7EY
+    latitude: 53.4700
+    longitude: -2.3760
+    capacity: 12000
+    capacity_source: "salecityarena.com"
+    venue_type: stadium
+    station_distance_km: 3.0
+    airport_distance_km: 16
+  - name: Ashton Gate Stadium
+    city: Bristol
+    postcode: BS3 2EJ
+    latitude: 51.4400
+    longitude: -2.6203
+    capacity: 27000
+    capacity_source: "ashtongatestadium.co.uk"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 10
+  - name: StoneX Stadium
+    aliases: [Allianz Park]
+    city: London
+    postcode: NW4 1RL
+    latitude: 51.6010
+    longitude: -0.2190
+    capacity: 10500
+    capacity_source: "saracens.com"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 20
+  - name: Twickenham Stoop
+    aliases: [The Stoop]
+    city: London
+    postcode: TW2 7SX
+    latitude: 51.4500
+    longitude: -0.3420
+    capacity: 14800
+    capacity_source: "quins.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 8
+  - name: The Racecourse Ground
+    aliases: [STōK Cae Ras, Racecourse Ground]
+    city: Wrexham
+    postcode: LL11 2AH
+    latitude: 53.0512
+    longitude: -3.0038
+    capacity: 13341
+    capacity_source: "wrexhamafc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.2
+    airport_distance_km: 40
+  - name: Oakwell
+    aliases: [Oakwell Stadium]
+    city: Barnsley
+    postcode: S71 1ET
+    latitude: 53.5522
+    longitude: -1.4676
+    capacity: 23287
+    capacity_source: "barnsleyfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 35
+  - name: Kirklees Stadium
+    aliases: [John Smith's Stadium]
+    city: Huddersfield
+    postcode: HD1 6PG
+    latitude: 53.6543
+    longitude: -1.7683
+    capacity: 24121
+    capacity_source: "htafc.com"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 25
+  - name: County Ground
+    aliases: [The County Ground]
+    city: Swindon
+    postcode: SN1 2ED
+    latitude: 51.5645
+    longitude: -1.7708
+    capacity: 15728
+    capacity_source: "swindontownfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.8
+    airport_distance_km: 45
+  - name: Brick Community Stadium
+    aliases: [DW Stadium]
+    city: Wigan
+    postcode: WN5 0UZ
+    latitude: 53.5477
+    longitude: -2.6538
+    capacity: 25138
+    capacity_source: "wiganathletic.com"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 35
+  - name: Toughsheet Community Stadium
+    aliases: [University of Bolton Stadium, Reebok Stadium]
+    city: Bolton
+    postcode: BL6 6JW
+    latitude: 53.5805
+    longitude: -2.5357
+    capacity: 28723
+    capacity_source: "bwfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 30
+  - name: New York Stadium
+    aliases: [AESSEAL New York Stadium]
+    city: Rotherham
+    postcode: S60 1AH
+    latitude: 53.4279
+    longitude: -1.3620
+    capacity: 12021
+    capacity_source: "themillers.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 30
+  - name: Hillsborough Stadium
+    city: Sheffield
+    postcode: S6 1SW
+    latitude: 53.4114
+    longitude: -1.5007
+    capacity: 39732
+    capacity_source: "swfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 4.5
+    airport_distance_km: 42
+  - name: Kassam Stadium
+    city: Oxford
+    postcode: OX4 4XP
+    latitude: 51.7163
+    longitude: -1.2081
+    capacity: 12500
+    capacity_source: "oufc.co.uk"
+    venue_type: stadium
+    station_distance_km: 5.0
+    airport_distance_km: 60
+  - name: Windsor Park
+    aliases: [National Football Stadium at Windsor Park]
+    city: Belfast
+    postcode: BT12 6LU
+    latitude: 54.5828
+    longitude: -5.9553
+    capacity: 18614
+    capacity_source: "irishfa.com"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 5
+  - name: Murrayfield Stadium
+    aliases: [Scottish Gas Murrayfield, BT Murrayfield, Murrayfield]
+    city: Edinburgh
+    postcode: EH12 5PJ
+    latitude: 55.9422
+    longitude: -3.2409
+    capacity: 67144
+    capacity_source: "scottishrugby.org"
+    venue_type: stadium
+    station_distance_km: 2.5
+    airport_distance_km: 8
+  - name: Hampden Park
+    city: Glasgow
+    postcode: G42 9BA
+    latitude: 55.8256
+    longitude: -4.2520
+    capacity: 51866
+    capacity_source: "hampdenpark.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 14
+  - name: Hull City Stadium
+    aliases: [MKM Stadium]
+    city: Hull
+    postcode: HU3 6HU
+    latitude: 53.7462
+    longitude: -0.3678
+    capacity: 25586
+    capacity_source: "wearehullcity.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.5
+    airport_distance_km: 30
+  - name: Bloomfield Road
+    city: Blackpool
+    postcode: FY1 6JJ
+    latitude: 53.8047
+    longitude: -3.0480
+    capacity: 16616
+    capacity_source: "blackpoolfc.co.uk"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 50
+  - name: Cardiff Arms Park
+    city: Cardiff
+    postcode: CF10 1JA
+    latitude: 51.4800
+    longitude: -3.1840
+    capacity: 12125
+    capacity_source: "cardiffrugby.wales"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 16
+  - name: Kingston Park
+    city: Newcastle upon Tyne
+    postcode: NE13 8AF
+    latitude: 55.0221
+    longitude: -1.6737
+    capacity: 10200
+    capacity_source: "newcastlefalcons.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.5
+    airport_distance_km: 3
+  - name: Sixways Stadium
+    city: Worcester
+    postcode: WR3 8ZE
+    latitude: 52.2214
+    longitude: -2.1743
+    capacity: 11499
+    capacity_source: "warriors.co.uk"
+    venue_type: stadium
+    station_distance_km: 4.0
+    airport_distance_km: 45
+  - name: The Hawthorns
+    city: West Bromwich
+    postcode: B71 4LF
+    latitude: 52.5090
+    longitude: -1.9639
+    capacity: 26850
+    capacity_source: "wba.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.3
+    airport_distance_km: 18
+  - name: The Valley
+    city: London
+    postcode: SE7 8BL
+    latitude: 51.4865
+    longitude: 0.0364
+    capacity: 27111
+    capacity_source: "cafc.co.uk"
+    venue_type: stadium
+    station_distance_km: 0.4
+    airport_distance_km: 6
+  - name: LNER Stadium
+    aliases: [ProAmpac Stadium, Sincil Bank]
+    city: Lincoln
+    postcode: LN5 8LD
+    latitude: 53.2184
+    longitude: -0.5407
+    capacity: 10669
+    capacity_source: "weareimps.com"
+    venue_type: stadium
+    station_distance_km: 1.0
+    airport_distance_km: 60
+
+  # --- Jockey Club racecourses (official JSON-LD Event listings; robots.txt allows /events-tickets/). Capacity unknown unless published.
+  - name: Cheltenham Racecourse
+    city: Cheltenham
+    postcode: GL50 4SH
+    latitude: 51.9186
+    longitude: -2.0716
+    capacity: 68500
+    capacity_source: "thejockeyclub.co.uk (Cheltenham Festival maximum)"
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/cheltenham/
+    official_events_url: https://www.thejockeyclub.co.uk/cheltenham/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Aintree Racecourse
+    city: Liverpool
+    postcode: L9 5AS
+    latitude: 53.4767
+    longitude: -2.9425
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/aintree/
+    official_events_url: https://www.thejockeyclub.co.uk/aintree/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Epsom Downs Racecourse
+    city: Epsom
+    postcode: KT18 5LQ
+    latitude: 51.3135
+    longitude: -0.2554
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/epsom/
+    official_events_url: https://www.thejockeyclub.co.uk/epsom/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Newmarket Racecourses
+    city: Newmarket
+    postcode: CB8 0TF
+    latitude: 52.2374
+    longitude: 0.3801
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/newmarket/
+    official_events_url: https://www.thejockeyclub.co.uk/newmarket/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Sandown Park Racecourse
+    city: Esher
+    postcode: KT10 9AJ
+    latitude: 51.3745
+    longitude: -0.3595
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/sandown/
+    official_events_url: https://www.thejockeyclub.co.uk/sandown/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Kempton Park Racecourse
+    city: Sunbury-on-Thames
+    postcode: TW16 5AQ
+    latitude: 51.4197
+    longitude: -0.4085
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/kempton/
+    official_events_url: https://www.thejockeyclub.co.uk/kempton/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Haydock Park Racecourse
+    city: Newton-le-Willows
+    postcode: WA12 0HQ
+    latitude: 53.482
+    longitude: -2.6297
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/haydock/
+    official_events_url: https://www.thejockeyclub.co.uk/haydock/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Exeter Racecourse
+    city: Exeter
+    postcode: EX6 7XS
+    latitude: 50.6455
+    longitude: -3.5443
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/exeter/
+    official_events_url: https://www.thejockeyclub.co.uk/exeter/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Wincanton Racecourse
+    city: Wincanton
+    postcode: BA9 8BJ
+    latitude: 51.0662
+    longitude: -2.4001
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/wincanton/
+    official_events_url: https://www.thejockeyclub.co.uk/wincanton/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Warwick Racecourse
+    city: Warwick
+    postcode: CV34 6HN
+    latitude: 52.2848
+    longitude: -1.598
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/warwick/
+    official_events_url: https://www.thejockeyclub.co.uk/warwick/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Huntingdon Racecourse
+    city: Huntingdon
+    postcode: PE28 4NL
+    latitude: 52.3512
+    longitude: -0.1364
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/huntingdon/
+    official_events_url: https://www.thejockeyclub.co.uk/huntingdon/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Nottingham Racecourse
+    city: Nottingham
+    postcode: NG2 4BE
+    latitude: 52.9366
+    longitude: -1.1198
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/nottingham/
+    official_events_url: https://www.thejockeyclub.co.uk/nottingham/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+  - name: Carlisle Racecourse
+    city: Carlisle
+    postcode: CA2 4TS
+    latitude: 54.8664
+    longitude: -2.9522
+    capacity: null
+    venue_type: racecourse
+    official_website: https://www.thejockeyclub.co.uk/carlisle/
+    official_events_url: https://www.thejockeyclub.co.uk/carlisle/events-tickets/
+    category_hint: fallback:horse_racing
+    source_priority: 85
+    verification_status: ACTIVE
+    last_probed: 2026-09-18
+
+  # --- Scottish Premiership / WSL grounds (added 2026-09-18 for fixture→city resolution). Capacity null: not source-verified here.
+  - name: Celtic Park
+    city: Glasgow
+    postcode: G40 3RE
+    latitude: 55.8497
+    longitude: -4.2056
+    capacity: null
+    venue_type: stadium
+  - name: Ibrox Stadium
+    city: Glasgow
+    postcode: G51 2XD
+    latitude: 55.8532
+    longitude: -4.3093
+    capacity: null
+    venue_type: stadium
+  - name: Tynecastle Park
+    city: Edinburgh
+    postcode: EH11 2NL
+    latitude: 55.9391
+    longitude: -3.2323
+    capacity: null
+    venue_type: stadium
+  - name: Easter Road Stadium
+    city: Edinburgh
+    postcode: EH7 5QG
+    latitude: 55.9617
+    longitude: -3.1655
+    capacity: null
+    venue_type: stadium
+  - name: Pittodrie Stadium
+    city: Aberdeen
+    postcode: AB24 5QH
+    latitude: 57.1594
+    longitude: -2.0888
+    capacity: null
+    venue_type: stadium
+  - name: Dens Park
+    city: Dundee
+    postcode: DD3 7JY
+    latitude: 56.4749
+    longitude: -2.9715
+    capacity: null
+    venue_type: stadium
+  - name: CalForth Construction Arena at Tannadice Park
+    aliases: ['Tannadice Park']
+    city: Dundee
+    postcode: DD3 7JW
+    latitude: 56.4746
+    longitude: -2.9689
+    capacity: null
+    venue_type: stadium
+  - name: McDiarmid Park
+    city: Perth
+    postcode: PH1 2SJ
+    latitude: 56.4098
+    longitude: -3.4761
+    capacity: null
+    venue_type: stadium
+  - name: The Marbill Coaches Stadium
+    aliases: ['St Mirren Park', 'SMISA Stadium']
+    city: Paisley
+    postcode: PA3 2EJ
+    latitude: 55.8534
+    longitude: -4.4297
+    capacity: null
+    venue_type: stadium
+  - name: The BBSP Stadium Rugby Park
+    aliases: ['Rugby Park']
+    city: Kilmarnock
+    postcode: KA1 2DP
+    latitude: 55.6044
+    longitude: -4.5085
+    capacity: null
+    venue_type: stadium
+  - name: Fir Park
+    city: Motherwell
+    postcode: ML1 2QN
+    latitude: 55.7803
+    longitude: -3.9804
+    capacity: null
+    venue_type: stadium
+  - name: The Falkirk Stadium
+    city: Falkirk
+    postcode: FK2 9EE
+    latitude: 56.0053
+    longitude: -3.7522
+    capacity: null
+    venue_type: stadium
+  - name: Livingston Stadium
+    aliases: ['Almondvale Stadium', 'Home of the Set Fare Arena']
+    city: Livingston
+    postcode: EH54 7DN
+    latitude: 55.8862
+    longitude: -3.5222
+    capacity: null
+    venue_type: stadium
+  - name: Copperjax Community Stadium
+    aliases: ['Kingsmeadow']
+    city: Kingsmeadow
+    postcode: KT1 3PB
+    latitude: 51.405
+    longitude: -0.282
+    capacity: null
+    venue_type: stadium
+  - name: Chigwell Construction Stadium
+    aliases: ['Victoria Road']
+    city: Dagenham
+    postcode: RM10 7XL
+    latitude: 51.5478
+    longitude: 0.1594
+    capacity: null
+    venue_type: stadium
+  - name: VBS Community Stadium
+    aliases: ['Gander Green Lane']
+    city: Sutton
+    postcode: SM1 2EY
+    latitude: 51.3697
+    longitude: -0.1918
+    capacity: null
+    venue_type: stadium
+  - name: Progress with Unity Stadium
+    aliases: ['Leigh Sports Village']
+    city: Leigh
+    postcode: WN7 4JY
+    latitude: 53.4869
+    longitude: -2.5375
+    capacity: null
+    venue_type: stadium
+  - name: Joie Stadium
+    aliases: ['Academy Stadium']
+    city: Manchester
+    postcode: M11 4DG
+    latitude: 53.4841
+    longitude: -2.1957
+    capacity: null
+    venue_type: stadium
+  - name: BrewDog Stadium
+    aliases: ['Bescot Stadium']
+    city: Walsall
+    postcode: WS1 4SA
+    latitude: 52.5655
+    longitude: -1.9909
+    capacity: null
+    venue_type: stadium
+  - name: BetWright Stadium
+    aliases: ['Broadfield Stadium']
+    city: Crawley
+    postcode: RH11 9RX
+    latitude: 51.0996
+    longitude: -0.1948
+    capacity: null
+    venue_type: stadium
+  - name: Broadfield Stadium
+    city: Crawley
+    postcode: RH11 9RX
+    latitude: 51.0996
+    longitude: -0.1948
+    capacity: null
+    venue_type: stadium
+  - name: Meadow Park
+    city: Borehamwood
+    postcode: WD6 5AL
+    latitude: 51.665
+    longitude: -0.283
+    capacity: null
+    venue_type: stadium
+  - name: Prenton Park
+    city: Birkenhead
+    postcode: CH42 9PY
+    latitude: 53.3736
+    longitude: -3.0326
+    capacity: null
+    venue_type: stadium
+  - name: Mangata Pay UK Stadium
+    aliases: ['Eppleton Colliery Welfare Ground']
+    city: Sunderland
+    postcode: SR5 1DL
+    latitude: 54.912
+    longitude: -1.4022
+    capacity: null
+    venue_type: stadium
+
+  # --- Theatre & concert-hall registry (Phase 3). Verified 2026-09-18: Spektrix-style RSS titles carry performance date/time;
+  #     Nimax event pages carry schema.org Event JSON-LD (listed via public wp-json index). Capacity only where published.
+  - name: Nimax Theatres (West End)
+    city: London
+    postcode: WC2B 5LA
+    latitude: 51.5126
+    longitude: -0.1195
+    capacity: null
+    venue_type: theatre_group
+    prefer_schema_venue: true
+    official_website: https://www.nimaxtheatres.com
+    wp_json_url: https://nimaxtheatres.com/wp-json/wp/v2/shows
+    max_wp_items: 40
+    category_hint: "fallback:theatre"
+    notes: "Six West End houses; JSON-LD per show page lists individual performances with the specific theatre as location."
+  - name: Royal Lyceum Theatre
+    aliases: [Lyceum Theatre Edinburgh, The Lyceum]
+    city: Edinburgh
+    postcode: EH3 9AX
+    latitude: 55.9469
+    longitude: -3.2053
+    capacity: 658
+    capacity_source: "lyceum.org.uk"
+    venue_type: theatre
+    official_website: https://lyceum.org.uk
+    rss_url: https://lyceum.org.uk/feed.rss
+    category_hint: "fallback:theatre"
+  - name: Dundee Rep Theatre
+    aliases: [Dundee Rep]
+    city: Dundee
+    postcode: DD1 1PB
+    latitude: 56.4578
+    longitude: -2.9764
+    capacity: 455
+    capacity_source: "dundeerep.co.uk"
+    venue_type: theatre
+    official_website: https://dundeerep.co.uk
+    rss_url: https://dundeerep.co.uk/feed.rss
+    category_hint: "fallback:theatre"
+  - name: Symphony Hall Birmingham
+    aliases: [Symphony Hall, Birmingham Symphony Hall, B:Music]
+    city: Birmingham
+    postcode: B1 2EA
+    latitude: 52.4791
+    longitude: -1.9092
+    capacity: 2262
+    capacity_source: "bmusic.co.uk"
+    venue_type: concert_hall
+    official_website: https://bmusic.co.uk
+    rss_url: https://bmusic.co.uk/feed.rss
+    category_hint: "fallback:concert"
+  - name: Oxford Playhouse
+    city: Oxford
+    postcode: OX1 2LW
+    latitude: 51.7551
+    longitude: -1.2597
+    capacity: 613
+    capacity_source: "oxfordplayhouse.com"
+    venue_type: theatre
+    official_website: https://www.oxfordplayhouse.com
+    rss_url: https://www.oxfordplayhouse.com/feed.rss
+    category_hint: "fallback:theatre"
+  - name: Eden Court
+    aliases: [Eden Court Theatre]
+    city: Inverness
+    postcode: IV3 5SA
+    latitude: 57.4747
+    longitude: -4.2312
+    capacity: 840
+    capacity_source: "eden-court.co.uk"
+    venue_type: theatre
+    official_website: https://eden-court.co.uk
+    rss_url: https://eden-court.co.uk/feed.rss
+    category_hint: "fallback:theatre"
+    enabled: false
+    verification_status: EMPTY
+    notes: "Feed is news-only (no dated performances) as of 2026-09-18."
+
+  # --- Nimax West End houses (locations reported by the Nimax JSON-LD; coordinates from public map data; capacity from nimaxtheatres.com)
+  - name: Vaudeville Theatre
+    city: London
+    postcode: WC2R 0NH
+    latitude: 51.5104
+    longitude: -0.1214
+    capacity: 691
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/vaudeville-theatre/
+  - name: Lyric Theatre
+    aliases: [Lyric Theatre Shaftesbury Avenue]
+    city: London
+    postcode: W1D 7ES
+    latitude: 51.5113
+    longitude: -0.1332
+    capacity: 938
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/lyric-theatre/
+  - name: Apollo Theatre
+    aliases: [Apollo Theatre Shaftesbury Avenue]
+    city: London
+    postcode: W1D 7EZ
+    latitude: 51.5114
+    longitude: -0.1325
+    capacity: 827
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/apollo-theatre/
+  - name: Garrick Theatre
+    city: London
+    postcode: WC2H 0HH
+    latitude: 51.5100
+    longitude: -0.1276
+    capacity: 695
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/garrick-theatre/
+  - name: Duchess Theatre
+    city: London
+    postcode: WC2B 5LA
+    latitude: 51.5126
+    longitude: -0.1195
+    capacity: 503
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/duchess-theatre/
+  - name: Palace Theatre
+    aliases: [Palace Theatre London]
+    city: London
+    postcode: W1D 5AY
+    latitude: 51.5131
+    longitude: -0.1289
+    capacity: 1434
+    capacity_source: "nimaxtheatres.com"
+    venue_type: theatre
+    official_website: https://www.nimaxtheatres.com/theatres/palace-theatre/

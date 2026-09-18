@@ -1,0 +1,579 @@
+# Coordinates from OpenStreetMap/Nominatim (public). Population: ONS mid-2021 census estimates (built-up areas), optional.
+cities:
+  - name: London
+    region: Greater London
+    country: England
+    latitude: 51.5074
+    longitude: -0.1278
+    population: 8799800
+    population_source: "ONS Census 2021"
+    priority: 100
+    tourism: 1.0
+  - name: Manchester
+    region: North West
+    country: England
+    latitude: 53.4808
+    longitude: -2.2426
+    population: 551900
+    population_source: "ONS Census 2021"
+    priority: 95
+    tourism: 0.8
+  - name: Birmingham
+    region: West Midlands
+    country: England
+    latitude: 52.4862
+    longitude: -1.8904
+    population: 1144900
+    population_source: "ONS Census 2021"
+    priority: 95
+    tourism: 0.7
+  - name: Leeds
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.8008
+    longitude: -1.5491
+    population: 811900
+    population_source: "ONS Census 2021"
+    priority: 85
+    tourism: 0.6
+  - name: Liverpool
+    region: North West
+    country: England
+    latitude: 53.4084
+    longitude: -2.9916
+    population: 486100
+    population_source: "ONS Census 2021"
+    priority: 90
+    tourism: 0.8
+  - name: Newcastle upon Tyne
+    region: North East
+    country: England
+    latitude: 54.9783
+    longitude: -1.6178
+    population: 300200
+    population_source: "ONS Census 2021"
+    priority: 80
+    tourism: 0.6
+    aliases: [Newcastle]
+  - name: Sheffield
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.3811
+    longitude: -1.4701
+    population: 556500
+    population_source: "ONS Census 2021"
+    priority: 75
+    tourism: 0.5
+  - name: Bristol
+    region: South West
+    country: England
+    latitude: 51.4545
+    longitude: -2.5879
+    population: 472400
+    population_source: "ONS Census 2021"
+    priority: 80
+    tourism: 0.6
+  - name: Nottingham
+    region: East Midlands
+    country: England
+    latitude: 52.9548
+    longitude: -1.1581
+    population: 323700
+    population_source: "ONS Census 2021"
+    priority: 75
+    tourism: 0.5
+  - name: Leicester
+    region: East Midlands
+    country: England
+    latitude: 52.6369
+    longitude: -1.1398
+    population: 368600
+    population_source: "ONS Census 2021"
+    priority: 70
+    tourism: 0.4
+  - name: Southampton
+    region: South East
+    country: England
+    latitude: 50.9097
+    longitude: -1.4044
+    population: 248800
+    population_source: "ONS Census 2021"
+    priority: 70
+    tourism: 0.5
+  - name: Brighton
+    region: South East
+    country: England
+    latitude: 50.8225
+    longitude: -0.1372
+    population: 277100
+    population_source: "ONS Census 2021"
+    priority: 75
+    tourism: 0.8
+    aliases: [Brighton and Hove]
+  - name: Wolverhampton
+    region: West Midlands
+    country: England
+    latitude: 52.5870
+    longitude: -2.1288
+    priority: 60
+    tourism: 0.3
+  - name: Sunderland
+    region: North East
+    country: England
+    latitude: 54.9069
+    longitude: -1.3838
+    priority: 60
+    tourism: 0.3
+  - name: Burnley
+    region: North West
+    country: England
+    latitude: 53.7890
+    longitude: -2.2480
+    priority: 50
+    tourism: 0.2
+  - name: Bournemouth
+    region: South West
+    country: England
+    latitude: 50.7192
+    longitude: -1.8808
+    priority: 65
+    tourism: 0.7
+  - name: Cardiff
+    region: Wales
+    country: Wales
+    latitude: 51.4816
+    longitude: -3.1791
+    population: 362400
+    population_source: "ONS Census 2021"
+    priority: 80
+    tourism: 0.6
+  - name: Swansea
+    region: Wales
+    country: Wales
+    latitude: 51.6214
+    longitude: -3.9436
+    priority: 60
+    tourism: 0.4
+  - name: Glasgow
+    region: Scotland
+    country: Scotland
+    latitude: 55.8642
+    longitude: -4.2518
+    priority: 85
+    tourism: 0.7
+  - name: Edinburgh
+    region: Scotland
+    country: Scotland
+    latitude: 55.9533
+    longitude: -3.1883
+    priority: 85
+    tourism: 0.9
+  - name: Belfast
+    region: Northern Ireland
+    country: Northern Ireland
+    latitude: 54.5973
+    longitude: -5.9301
+    priority: 70
+    tourism: 0.6
+  - name: Coventry
+    region: West Midlands
+    country: England
+    latitude: 52.4068
+    longitude: -1.5197
+    priority: 65
+    tourism: 0.4
+  - name: Derby
+    region: East Midlands
+    country: England
+    latitude: 52.9225
+    longitude: -1.4746
+    priority: 60
+    tourism: 0.3
+  - name: Stoke-on-Trent
+    region: West Midlands
+    country: England
+    latitude: 53.0027
+    longitude: -2.1794
+    priority: 55
+    tourism: 0.3
+    aliases: [Stoke]
+  - name: Hull
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.7676
+    longitude: -0.3274
+    priority: 55
+    tourism: 0.3
+    aliases: [Kingston upon Hull]
+  - name: Middlesbrough
+    region: North East
+    country: England
+    latitude: 54.5742
+    longitude: -1.2350
+    priority: 50
+    tourism: 0.2
+  - name: Norwich
+    region: East of England
+    country: England
+    latitude: 52.6309
+    longitude: 1.2974
+    priority: 60
+    tourism: 0.5
+  - name: Ipswich
+    region: East of England
+    country: England
+    latitude: 52.0567
+    longitude: 1.1482
+    priority: 55
+    tourism: 0.3
+  - name: Portsmouth
+    region: South East
+    country: England
+    latitude: 50.8198
+    longitude: -1.0880
+    priority: 60
+    tourism: 0.5
+  - name: Preston
+    region: North West
+    country: England
+    latitude: 53.7632
+    longitude: -2.7031
+    priority: 50
+    tourism: 0.2
+  - name: Blackburn
+    region: North West
+    country: England
+    latitude: 53.7480
+    longitude: -2.4820
+    priority: 45
+    tourism: 0.2
+  - name: Watford
+    region: East of England
+    country: England
+    latitude: 51.6565
+    longitude: -0.3903
+    priority: 50
+    tourism: 0.2
+  - name: Luton
+    region: East of England
+    country: England
+    latitude: 51.8787
+    longitude: -0.4200
+    priority: 50
+    tourism: 0.3
+  - name: Oxford
+    region: South East
+    country: England
+    latitude: 51.7520
+    longitude: -1.2577
+    priority: 65
+    tourism: 0.8
+  - name: Reading
+    region: South East
+    country: England
+    latitude: 51.4543
+    longitude: -0.9781
+    priority: 55
+    tourism: 0.3
+  - name: Plymouth
+    region: South West
+    country: England
+    latitude: 50.3755
+    longitude: -4.1427
+    priority: 55
+    tourism: 0.4
+  - name: Bath
+    region: South West
+    country: England
+    latitude: 51.3811
+    longitude: -2.3590
+    priority: 55
+    tourism: 0.8
+  - name: Exeter
+    region: South West
+    country: England
+    latitude: 50.7184
+    longitude: -3.5339
+    priority: 50
+    tourism: 0.4
+  - name: Gloucester
+    region: South West
+    country: England
+    latitude: 51.8642
+    longitude: -2.2380
+    priority: 45
+    tourism: 0.3
+  - name: Northampton
+    region: East Midlands
+    country: England
+    latitude: 52.2405
+    longitude: -0.9027
+    priority: 45
+    tourism: 0.2
+  - name: Millwall
+    region: Greater London
+    country: England
+    latitude: 51.4859
+    longitude: -0.0509
+    priority: 40
+    tourism: 0.2
+  - name: Wrexham
+    region: Wales
+    country: Wales
+    latitude: 53.0430
+    longitude: -2.9925
+    priority: 45
+    tourism: 0.3
+  - name: Sale
+    region: North West
+    country: England
+    latitude: 53.4246
+    longitude: -2.3220
+    priority: 40
+    tourism: 0.2
+  - name: Newcastle-under-Lyme
+    region: West Midlands
+    country: England
+    latitude: 53.0100
+    longitude: -2.2270
+    priority: 35
+    tourism: 0.1
+  - name: Swindon
+    region: South West
+    country: England
+    latitude: 51.5558
+    longitude: -1.7797
+    priority: 45
+    tourism: 0.2
+  - name: Huddersfield
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.6458
+    longitude: -1.7850
+    priority: 45
+    tourism: 0.2
+  - name: Barnsley
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.5526
+    longitude: -1.4797
+    priority: 40
+    tourism: 0.1
+  - name: Bolton
+    region: North West
+    country: England
+    latitude: 53.5769
+    longitude: -2.4282
+    priority: 45
+    tourism: 0.2
+  - name: Wigan
+    region: North West
+    country: England
+    latitude: 53.5450
+    longitude: -2.6325
+    priority: 40
+    tourism: 0.1
+  - name: Rotherham
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.4326
+    longitude: -1.3635
+    priority: 40
+    tourism: 0.1
+  - name: Cambridge
+    region: East of England
+    country: England
+    latitude: 52.2053
+    longitude: 0.1218
+    priority: 60
+    tourism: 0.8
+  - name: York
+    region: Yorkshire and the Humber
+    country: England
+    latitude: 53.9590
+    longitude: -1.0815
+    priority: 55
+    tourism: 0.8
+  - name: West Bromwich
+    region: West Midlands
+    country: England
+    latitude: 52.5187
+    longitude: -1.9945
+    priority: 45
+    tourism: 0.1
+  - name: Lincoln
+    region: East Midlands
+    country: England
+    latitude: 53.2307
+    longitude: -0.5406
+    priority: 45
+    tourism: 0.4
+  - name: Blackpool
+    region: North West
+    country: England
+    latitude: 53.8175
+    longitude: -3.0357
+    priority: 50
+    tourism: 0.7
+  - name: Worcester
+    region: West Midlands
+    country: England
+    latitude: 52.1936
+    longitude: -2.2216
+    priority: 40
+    tourism: 0.3
+  # --- added 2026-09-18 (Scottish Premiership grounds, racecourse towns). Population: ONS/NRS 2022 mid-year built-up-area estimates where cited; null otherwise.
+  - name: Aberdeen
+    region: Scotland
+    country: Scotland
+    latitude: 57.1497
+    longitude: -2.0943
+    population: 198590
+    population_source: "NRS mid-2022 settlement estimate"
+    priority: 60
+    tourism: 0.5
+  - name: Dundee
+    region: Scotland
+    country: Scotland
+    latitude: 56.4620
+    longitude: -2.9707
+    population: 148280
+    population_source: "NRS mid-2022 settlement estimate"
+    priority: 55
+    tourism: 0.5
+  - name: Perth
+    region: Scotland
+    country: Scotland
+    latitude: 56.3950
+    longitude: -3.4308
+    population: null
+    priority: 40
+    tourism: 0.4
+  - name: Paisley
+    region: Scotland
+    country: Scotland
+    latitude: 55.8456
+    longitude: -4.4239
+    population: null
+    priority: 40
+    tourism: 0.3
+  - name: Kilmarnock
+    region: Scotland
+    country: Scotland
+    latitude: 55.6117
+    longitude: -4.4957
+    population: null
+    priority: 35
+    tourism: 0.3
+  - name: Motherwell
+    region: Scotland
+    country: Scotland
+    latitude: 55.7892
+    longitude: -3.9917
+    population: null
+    priority: 35
+    tourism: 0.3
+  - name: Falkirk
+    region: Scotland
+    country: Scotland
+    latitude: 56.0019
+    longitude: -3.7839
+    population: null
+    priority: 35
+    tourism: 0.3
+  - name: Livingston
+    region: Scotland
+    country: Scotland
+    latitude: 55.8834
+    longitude: -3.5157
+    population: null
+    priority: 30
+    tourism: 0.2
+  - name: Cheltenham
+    region: South West
+    country: England
+    latitude: 51.8994
+    longitude: -2.0783
+    population: null
+    priority: 50
+    tourism: 0.6
+  - name: Newmarket
+    region: East of England
+    country: England
+    latitude: 52.2459
+    longitude: 0.4065
+    population: null
+    priority: 35
+    tourism: 0.5
+  - name: Epsom
+    region: South East
+    country: England
+    latitude: 51.3360
+    longitude: -0.2675
+    population: null
+    priority: 35
+    tourism: 0.4
+  - name: Warwick
+    region: West Midlands
+    country: England
+    latitude: 52.2823
+    longitude: -1.5849
+    population: null
+    priority: 35
+    tourism: 0.5
+  - name: Carlisle
+    region: North West
+    country: England
+    latitude: 54.8925
+    longitude: -2.9329
+    population: null
+    priority: 35
+    tourism: 0.4
+  - name: Huntingdon
+    region: East of England
+    country: England
+    latitude: 52.3314
+    longitude: -0.1826
+    population: null
+    priority: 25
+    tourism: 0.2
+  - name: Wincanton
+    region: South West
+    country: England
+    latitude: 51.0553
+    longitude: -2.4110
+    population: null
+    priority: 20
+    tourism: 0.2
+  - name: Esher
+    region: South East
+    country: England
+    latitude: 51.3696
+    longitude: -0.3652
+    population: null
+    priority: 25
+    tourism: 0.2
+  - name: Sunbury-on-Thames
+    region: South East
+    country: England
+    latitude: 51.4200
+    longitude: -0.4183
+    population: null
+    priority: 25
+    tourism: 0.2
+  - name: Newton-le-Willows
+    region: North West
+    country: England
+    latitude: 53.4522
+    longitude: -2.6337
+    population: null
+    priority: 20
+    tourism: 0.2
+  - name: Crawley
+    region: South East
+    country: England
+    latitude: 51.1092
+    longitude: -0.1872
+    population: null
+    priority: 30
+    tourism: 0.2

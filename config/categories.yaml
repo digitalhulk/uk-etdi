@@ -1,0 +1,103 @@
+# Deterministic keyword classifier. First matching rule (by order) wins; longer keywords checked first.
+categories:
+  - category: sports
+    subcategory: ice_hockey   # Elite Ice Hockey League club names (checked before the generic " v " football rule)
+    keywords: ["ice hockey", "manchester storm", "sheffield steelers", "nottingham panthers", "cardiff devils", "belfast giants", "glasgow clan", "guildford flames", "coventry blaze", "dundee stars", "fife flyers"]
+  - category: sports
+    subcategory: football
+    keywords: [" v ", " vs ", "premier league", "championship", "fa cup", "football", "efl", "league one", "league two"]
+  - category: sports
+    subcategory: rugby
+    keywords: ["rugby", "premiership rugby", "six nations"]
+  - category: sports
+    subcategory: cricket
+    keywords: ["cricket", "t20", "the hundred", "test match"]
+  - category: sports
+    subcategory: horse_racing
+    keywords: ["horse_racing", "horse racing", "racecourse", "raceday", "race day", "race night", "racing", "the april meeting", "festival trials day", "cheltenham festival", "grand national", "the derby", "guineas", "royal ascot"]
+  - category: sports
+    subcategory: other
+    keywords: ["sportsevent", "boxing", "ufc", "wrestling", "darts", "snooker", "tennis", "athletics", "marathon", "motorsport", "grand prix", "horse racing", "racecourse", "ice hockey", "hockey", "laver cup", "davis cup", "netball", "basketball", "gymnastics", "swimming championships"]
+  - category: community
+    subcategory: tour
+    keywords: ["guided tour", "walking tour", "tour of", "trail", "heritage open", "open day", "open days"]
+  - category: music
+    subcategory: concert
+    keywords: ["musicevent", "concert", "live music", " tour ", " tour:", "gig", "in concert", "orchestra", "symphony", "philharmonic", "live at", "world tour", "arena tour"]
+  - category: music
+    subcategory: festival
+    keywords: ["music festival", "festival stage"]
+  - category: education
+    subcategory: university
+    keywords: ["freshers", "fresher's", "graduation", "open day", "university", "matriculation", "convocation"]
+  - category: education
+    subcategory: school
+    keywords: ["school concert", "school play", "prom night", "school"]
+  - category: festival
+    subcategory: food
+    keywords: ["food festival", "street food", "beer festival", "wine festival"]
+  - category: festival
+    subcategory: general
+    keywords: ["festival", "carnival", "fair", "fireworks", "bonfire", "parade", "christmas market"]
+  - category: theatre
+    subcategory: show
+    keywords: ["theatre", "theater", "musical", "west end", "ballet", "opera", "pantomime", "play"]
+  - category: comedy
+    subcategory: standup
+    keywords: ["comedy", "comedian", "stand-up", "stand up"]
+  - category: conference
+    subcategory: business
+    keywords: ["conference", "expo", "summit", "exhibition", "trade show", "convention", "comic con", "wedding show", "wedding fair", "careers fair", "jobs fair"]
+  - category: nightlife
+    subcategory: club
+    keywords: ["club night", "dj set", "rave", "nightclub"]
+  - category: family
+    subcategory: attraction
+    keywords: ["family", "kids", "disney on ice", "circus", "half term", "half-term", "toddler", "baby show", "cbeebies", "peppa pig", "bluey"]
+  - category: arts
+    subcategory: exhibition
+    keywords: ["exhibition", "gallery", "museum", "art show", "painting", "drawing", "sculpture", "photography"]
+  - category: community
+    subcategory: market
+    keywords: ["market", "fair", "fete", "car boot", "craft"]
+  - category: community
+    subcategory: talk
+    keywords: ["talk", "lecture", "workshop", "class", "course", "seminar", "book club", "reading group"]
+  - category: community
+    subcategory: general
+    keywords: ["community", "charity", "fundrais", "volunteer", "parade", "fireworks", "bonfire", "christmas lights", "carnival", "christmas party", "celebrate christmas", "party night", "afternoon tea", "sunday lunch"]
+default:
+  category: other
+  subcategory: general
+
+# Category multipliers used by demand_score (0-1 => scaled to component weight)
+category_scores:
+  music: 1.0
+  sports: 0.95
+  festival: 0.85
+  nightlife: 0.8
+  theatre: 0.7
+  comedy: 0.65
+  education: 0.6
+  conference: 0.55
+  family: 0.5
+  arts: 0.4
+  community: 0.35
+  other: 0.3
+
+# Titles matching these (case-insensitive substrings) are ticketing artefacts, not events; rejected at validation.
+non_event_title_patterns:
+  - "to be announced v"
+  - "v to be announced"
+  - "tbc v tbc"
+  - "pre-order"
+  - "refundable"
+  - "deposit"
+  - "gift voucher"
+  - "gift card"
+  - "membership"
+  - "season announcement"
+  - "secret seats"
+  - "car park"
+  - "parking"
+  - "donation"

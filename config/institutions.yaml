@@ -1,0 +1,154 @@
+# Universities, colleges and schools. Registry-only: the collector never crawls institutions without an explicit
+# public calendar URL (ical_url / rss_url / events_url). No student portals or login-protected systems.
+# school_event_confidence: LOW|MEDIUM|HIGH — school events never auto-trigger marketing actions unless HIGH.
+# verification_status as in councils.yaml. Probed 2026-09-18: no UK university exposed a discoverable public
+# ICS/RSS/JSON-LD/tribe endpoint at conventional paths; several return 403 to automated clients.
+institutions:
+  - name: University of Manchester
+    type: university
+    city: Manchester
+    region: North West
+    website: https://www.manchester.ac.uk
+    events_url: https://events.manchester.ac.uk/
+    enabled: false
+    verification_status: EMPTY
+    notes: "Events page is JS rendered; no JSON-LD or feed found."
+  - name: University of Birmingham
+    type: university
+    city: Birmingham
+    region: West Midlands
+    website: https://www.birmingham.ac.uk
+    events_url: https://www.birmingham.ac.uk/events
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Leeds
+    type: university
+    city: Leeds
+    region: Yorkshire
+    website: https://www.leeds.ac.uk
+    enabled: false
+    verification_status: BLOCKED
+  - name: University of Oxford
+    type: university
+    city: Oxford
+    region: South East
+    website: https://www.ox.ac.uk
+    enabled: false
+    verification_status: BLOCKED
+  - name: University of Cambridge
+    type: university
+    city: Cambridge
+    region: East of England
+    website: https://www.cam.ac.uk
+    events_url: https://www.cam.ac.uk/whats-on
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Edinburgh
+    type: university
+    city: Edinburgh
+    region: Scotland
+    website: https://www.ed.ac.uk
+    events_url: https://www.ed.ac.uk/events
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Glasgow
+    type: university
+    city: Glasgow
+    region: Scotland
+    website: https://www.gla.ac.uk
+    events_url: https://www.gla.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  - name: Cardiff University
+    type: university
+    city: Cardiff
+    region: Wales
+    website: https://www.cardiff.ac.uk
+    enabled: false
+    verification_status: BLOCKED
+  - name: University of Bristol
+    type: university
+    city: Bristol
+    region: South West
+    website: https://www.bristol.ac.uk
+    events_url: https://www.bristol.ac.uk/whats-on/
+    enabled: false
+    verification_status: EMPTY
+  - name: Newcastle University
+    type: university
+    city: Newcastle upon Tyne
+    region: North East
+    website: https://www.ncl.ac.uk
+    events_url: https://www.ncl.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Nottingham
+    type: university
+    city: Nottingham
+    region: East Midlands
+    website: https://www.nottingham.ac.uk
+    events_url: https://www.nottingham.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Sheffield
+    type: university
+    city: Sheffield
+    region: Yorkshire
+    website: https://www.sheffield.ac.uk
+    events_url: https://www.sheffield.ac.uk/events
+    enabled: false
+    verification_status: EMPTY
+  - name: University of Liverpool
+    type: university
+    city: Liverpool
+    region: North West
+    website: https://www.liverpool.ac.uk
+    events_url: https://www.liverpool.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  - name: Queen's University Belfast
+    type: university
+    city: Belfast
+    region: Northern Ireland
+    website: https://www.qub.ac.uk
+    events_url: https://www.qub.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  - name: University College London
+    type: university
+    city: London
+    region: London
+    website: https://www.ucl.ac.uk
+    events_url: https://www.ucl.ac.uk/events/
+    enabled: false
+    verification_status: EMPTY
+  # Colleges / schools: intentionally empty until a public calendar URL is supplied. Template:
+  # - name: Example Sixth Form College
+  #   type: college            # college | sixth_form | school
+  #   city: Reading
+  #   ical_url: https://example.ac.uk/calendar.ics
+  #   school_event_confidence: LOW
+  #   enabled: true
+  #   verification_status: UNVERIFIED
+
+  # ---- Verified public structured feeds (probed 2026-09-18) ----
+  - name: University of Cambridge (talks.cam featured talks)
+    type: university
+    city: Cambridge
+    region: East of England
+    website: https://talks.cam.ac.uk
+    ical_url: https://talks.cam.ac.uk/show/ics/5606/
+    enabled: true
+    verification_status: ACTIVE
+    category_hint: talk
+    notes: "Public 'Featured talks' ICS list published by the University's talks.cam service."
+  - name: University of Aberdeen
+    type: university
+    city: Aberdeen
+    region: Scotland
+    website: https://www.abdn.ac.uk
+    rss_url: https://www.abdn.ac.uk/events/rss.xml
+    rss_pubdate_is_start: true
+    enabled: true
+    verification_status: ACTIVE
+    notes: "Official events RSS; pubDate is the event start for most items."

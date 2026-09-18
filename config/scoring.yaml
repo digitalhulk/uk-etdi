@@ -1,0 +1,148 @@
+# Transparent, explainable demand scoring. Weights sum to 100.
+weights:
+  event_scale: 20      # attendance estimate / capacity
+  venue_scale: 20      # venue capacity + importance
+  timing: 15           # evening / late finish
+  location: 15         # city priority + service area
+  transport: 10        # station/airport proximity (poor transport => more taxi demand at large venues)
+  category: 10         # category multiplier
+  tourism: 5           # city tourism factor
+  duration: 5          # multi-hour / multi-day
+
+demand_levels:
+  VERY_HIGH: 80
+  HIGH: 65
+  MEDIUM: 50
+  MODERATE: 35
+  LOW: 0
+
+marketing_priority:
+  P1: 80
+  P2: 65
+  P3: 50
+
+# Capacity bands used for venue_scale + event_scale (0..1 factor)
+capacity_bands:
+  - min: 50000
+    factor: 1.0
+  - min: 30000
+    factor: 0.82
+  - min: 15000
+    factor: 0.62
+  - min: 8000
+    factor: 0.45
+  - min: 3000
+    factor: 0.3
+  - min: 1000
+    factor: 0.2
+  - min: 0
+    factor: 0.1
+
+# Attendance estimate: capacity x category fill rate (MODELLED - never presented as fact)
+fill_rates:
+  sports: 0.9
+  music: 0.85
+  festival: 0.7
+  theatre: 0.75
+  comedy: 0.7
+  education: 0.6
+  conference: 0.5
+  nightlife: 0.7
+  family: 0.6
+  other: 0.4
+
+timing:
+  evening_start_hour: 17     # events starting 17:00+ score higher (night return demand)
+  late_finish_hour: 22
+  weekend_bonus: 0.25
+  friday_bonus: 0.15
+  unknown_time_factor: 0.5
+
+# Modelled demand windows (hours relative to start/end)
+windows:
+  pre_event_hours: 3
+  post_event_hours: 2.5
+  default_duration_hours:
+    sports: 2.25
+    music: 3.0
+    festival: 8.0
+    theatre: 2.5
+    comedy: 2.0
+    education: 4.0
+    conference: 8.0
+    nightlife: 5.0
+    family: 2.0
+    other: 3.0
+
+opportunity_thresholds:
+  generate_taxi_opportunities_min_score: 35
+  generate_marketing_min_score: 50
+
+# ---------------------------------------------------------------------------------------------------------------
+# Phase 2: event quality / trust / freshness / status (all weights configurable; every score carries reasons)
+# ---------------------------------------------------------------------------------------------------------------
+source_confidence_points:      # trust hierarchy → points toward event_quality_score
+  OFFICIAL: 40                 # venue / organiser / governing-body website or feed
+  TRUSTED: 32                  # republished official schedules (e.g. league fixture feeds), licensed APIs
+  SECONDARY: 20                # aggregators / listings sites
+  UNVERIFIED: 8
+  CURATED: 30                  # manually verified local file
+
+quality_points:                # additive completeness / corroboration points (max total with confidence = 100)
+  has_time: 12
+  has_venue_matched: 12        # venue resolved to registry (capacity / coordinates known)
+  has_venue_named: 6           # venue named but not in registry
+  has_city: 8
+  has_official_url: 8
+  has_postcode_or_coords: 5
+  category_classified: 5       # not 'other'
+  multi_source_bonus: 10       # seen by ≥2 independent sources
+  school_event_penalty: -20    # school calendars unless institution's school_event_confidence is HIGH
+  stale_penalty: -15           # freshness_score < 40
+
+quality_levels:                # thresholds on event_quality_score
+  HIGH: 75
+  MEDIUM: 45
+  LOW: 0
+
+freshness:                     # freshness_score = 100 at verification, linear decay to floor after `decay_days`
+  decay_days: 14
+  floor: 10
+  silent_after_days: 21        # event not returned by any source for this long → status_reason 'SOURCE SILENT'
+
+status_engine:
+  confirm_when_sources_gte: 2  # SCHEDULED → CONFIRMED when corroborated by ≥2 sources or a sold-out/ticket signal from an OFFICIAL source
+  cancelled_keywords: ["cancelled", "canceled", "called off", "abandoned"]
+  postponed_keywords: ["postponed", "new date tbc", "date tbc"]
+  rescheduled_keywords: ["rescheduled", "new date"]
+
+# Opportunity v2 (additive, transparent). components must sum ≤ 100 at maximum.
+opportunity_v2:
+  components:
+    demand: 55                 # opportunity_score (0..100) × 0.55
+    quality: 20                # event_quality_score × 0.20
+    freshness: 10              # freshness_score × 0.10
+    service_area: 15           # inside configured service area → full points; else 0
+  type_factors:                # per opportunity-type factor applied to the demand component only
+    HOME_TO_VENUE: 0.9
+    VENUE_TO_HOME: 1.0
+    STATION_TO_VENUE: 0.75
+    VENUE_TO_STATION: 0.75
+    HOTEL_TO_VENUE: 0.65
+    VENUE_TO_HOTEL: 0.65
+    AIRPORT_TO_VENUE: 0.6
+    VENUE_TO_AIRPORT: 0.55
+    LATE_NIGHT_RETURN: 0.95
+    PRE_BOOKING: 0.8
+
+# Action gating: recommendations are only generated when ALL gates pass (prevents thousands of low-value actions)
+action_gating:
+  min_opportunity_score: 65
+  min_quality_level: MEDIUM    # LOW-quality events never get automatic marketing recommendations
+  require_service_area: true   # only events in the configured service-area cities (Settings → service_area)
+  max_days_ahead: 30
+  min_days_ahead: 0
+  max_actions_per_run: 400
+  max_actions_per_event: 8
+  email_partnership_min_capacity: 15000   # EMAIL / PARTNERSHIP actions only for large registry venues
+  email_partnership_min_score: 70

@@ -1,0 +1,20 @@
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    env_file: .env
+    environment:
+      DATABASE_URL: sqlite:////data/uk_etdi.db
+      SCHEDULER_ENABLED: "1"          # in-process daily scheduler for self-hosted mode
+      SCHEDULER_INTERVAL_MINUTES: "1440"
+    volumes: ["etdi-data:/data"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 60s
+  # Optional: swap SQLite for Postgres by setting DATABASE_URL=postgresql+psycopg://etdi:etdi@db/etdi and adding psycopg to requirements
+  # db:
+  #   image: postgres:16-alpine
+  #   environment: { POSTGRES_USER: etdi, POSTGRES_PASSWORD: etdi, POSTGRES_DB: etdi }
+  #   volumes: ["pg-data:/var/lib/postgresql/data"]
+volumes:
+  etdi-data:
