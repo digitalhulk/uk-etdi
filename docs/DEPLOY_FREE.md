@@ -15,16 +15,16 @@ every daily run the workflow calls Render's deploy hook so the instance restarts
 1. Create a repo (public is simplest) and push this folder:
    ```bash
    cd uk-etdi && git init && git add -A && git commit -m "UK-ETDI" && git branch -M main
-   git remote add origin https://github.com/OWNER/REPO.git && git push -u origin main
+   git remote add origin https://github.com/digitalhulk/uk-etdi.git && git push -u origin main
    ```
 2. Repo → **Settings → Actions → General → Workflow permissions → Read and write** (the workflow pushes the `data` branch).
 3. Optional secrets (Settings → Secrets → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `TICKETMASTER_API_KEY`.
 4. **Actions → Daily pipeline → Run workflow** once. After ~5 min a `data` branch appears containing `uk_etdi.db`.
-   Check: `https://raw.githubusercontent.com/OWNER/REPO/data/uk_etdi.db` downloads (~30 MB).
+   Check: `https://raw.githubusercontent.com/digitalhulk/uk-etdi/data/uk_etdi.db` downloads (~30 MB).
 
 ## Step 2 — Render (5 min)
 1. https://render.com → sign up with GitHub (no card needed) → **New → Blueprint** → pick the repo. Render reads `render.yaml`.
-2. Before clicking Apply, edit env var `DATA_BRANCH_URL` → `https://raw.githubusercontent.com/OWNER/REPO/data/uk_etdi.db`.
+2. Before clicking Apply, edit env var `DATA_BRANCH_URL` → `https://raw.githubusercontent.com/digitalhulk/uk-etdi/data/uk_etdi.db`.
 3. Apply. First build ≈ 3–4 min. Your URL: `https://uk-etdi.onrender.com` (or `uk-etdi-xxxx`). Opens on any phone.
 4. Render → service → **Settings → Deploy Hook** → copy URL → GitHub repo secret **`DEPLOY_HOOK_URL`**. Now each daily
    run redeploys the API with the new DB automatically.
@@ -33,7 +33,7 @@ every daily run the workflow calls Render's deploy hook so the instance restarts
 
 Private repo? Either make only the `data` branch downloadable via a fine-grained PAT
 (`DATA_BRANCH_URL=https://TOKEN@raw.githubusercontent.com/...` is **not** supported by GitHub — use
-`https://api.github.com/repos/OWNER/REPO/contents/uk_etdi.db?ref=data` with header auth, see boot.sh comments), or simply keep the repo public: the DB
+`https://api.github.com/repos/digitalhulk/uk-etdi/contents/uk_etdi.db?ref=data` with header auth, see boot.sh comments), or simply keep the repo public: the DB
 contains only public event metadata and your modelled scores — no secrets.
 
 ## Alternative — Fly.io (persistent volume, no redeploy dance)

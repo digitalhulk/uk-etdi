@@ -13,9 +13,9 @@ services:
       - key: API_ADMIN_TOKEN
         generateValue: true    # Render generates a strong secret; read it in Environment tab
       # Public raw URL of the SQLite DB the GitHub Actions pipeline pushes to the `data` branch.
-      # Replace OWNER/REPO. For a PRIVATE repo use a raw URL with a token or make the data branch public.
+      # Replace digitalhulk/uk-etdi. For a PRIVATE repo use a raw URL with a token or make the data branch public.
       - key: DATA_BRANCH_URL
-        value: https://raw.githubusercontent.com/OWNER/REPO/data/uk_etdi.db
+        value: https://raw.githubusercontent.com/digitalhulk/uk-etdi/data/uk_etdi.db
       # Optional — leave blank to keep those sources DISABLED
       - key: TICKETMASTER_API_KEY
         sync: false
