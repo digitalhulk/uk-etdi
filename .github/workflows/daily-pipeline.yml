@@ -71,8 +71,10 @@ jobs:
       # Free-tier hosts have ephemeral disks: trigger a redeploy so the running API restarts with the fresh DB.
       - name: Redeploy hosted API (optional)
         if: always()
-        env: { HOOK: ${{ secrets.DEPLOY_HOOK_URL }} }
-        run: '[ -n "$HOOK" ] && curl -fsS -X POST "$HOOK" >/dev/null && echo "deploy hook called" || echo "no DEPLOY_HOOK_URL secret — skipped"'
+        env:
+          HOOK: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$HOOK" ]; then curl -fsS -X POST "$HOOK" >/dev/null && echo "deploy hook called"; else echo "no DEPLOY_HOOK_URL secret - skipped"; fi
 
       - name: Upload logs & artifacts
         if: always()
