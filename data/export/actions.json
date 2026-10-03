@@ -1,0 +1,1 @@
+{"detail": [{"type": "less_than_equal", "loc": ["query", "page_size"], "msg": "Input should be less than or equal to 200", "input": "500", "ctx": {"le": 200}}]}
