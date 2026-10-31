@@ -1,0 +1,768 @@
+2026-10-31 11:54:12,764 | INFO    | jobs | migrated + seeded: {'regions': 0, 'cities': 0, 'venues': 0, 'categories': 0, 'sources': 0}
+2026-10-31 11:54:12,932 | INFO    | pipeline | pipeline run 84 started (scheduled)
+2026-10-31 11:54:19,653 | INFO    | collector.football_fixtures | source=football_fixtures stage=collect status=HEALTHY duration_ms=6506 events=1458 endpoints=10/10 blocked=0
+2026-10-31 11:55:49,525 | INFO    | collector.venue_pages | source=venue_pages stage=collect status=HEALTHY duration_ms=89867 events=1439 endpoints=129/129 blocked=0
+2026-10-31 11:55:53,562 | INFO    | collector.universities | source=universities stage=collect status=HEALTHY duration_ms=4032 events=54 endpoints=2/2 blocked=0
+2026-10-31 11:57:43,672 | INFO    | collector.tourism | source=tourism stage=collect status=DEGRADED duration_ms=110106 events=257 endpoints=96/97 blocked=1
+2026-10-31 11:57:43,674 | INFO    | collector.ical_feeds | source=ical_feeds stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-10-31 11:57:43,677 | INFO    | collector.councils | source=councils stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-10-31 11:57:43,679 | INFO    | collector.colleges | source=colleges stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-10-31 11:57:43,681 | INFO    | collector.rss_feeds | source=rss_feeds stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-10-31 11:57:43,682 | INFO    | collector.schools | source=schools stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-10-31 11:57:43,685 | INFO    | collector.curated | source=curated stage=collect status=HEALTHY duration_ms=0 events=1 endpoints=0/0 blocked=0
+2026-10-31 11:57:55,698 | INFO    | pipeline | pipeline run 84 finished: SUCCESS in 222.77s
+pipeline run id: 84
+{
+  "generated_for": "2026-10-31",
+  "summary": {
+    "date": "2026-10-31",
+    "events_today": 69,
+    "events_tomorrow": 24,
+    "events_next_7_days": 261,
+    "events_next_30_days": 760,
+    "high": 61,
+    "very_high": 18,
+    "medium": 61,
+    "next_scheduled_run": "2026-11-01T06:00:00+00:00",
+    "data_freshness": {
+      "hours_since_last_success": 0.0,
+      "avg_freshness_score": 86.3,
+      "label": "FRESH"
+    },
+    "new_events": 59,
+    "changed_events": 13,
+    "cancelled_events": 0,
+    "sources_total": 13,
+    "sources_healthy": 10,
+    "sources_empty": 5,
+    "sources_blocked": 0,
+    "source_regressions": [],
+    "open_actions": 627,
+    "horizons": {
+      "today": 69,
+      "7d": 262,
+      "30d": 762,
+      "90d": 1674
+    },
+    "source_silent_events": 300
+  },
+  "by_category_7d": {
+    "arts": 2,
+    "comedy": 3,
+    "community": 50,
+    "education": 5,
+    "family": 1,
+    "festival": 14,
+    "music": 31,
+    "sports": 105,
+    "theatre": 50
+  },
+  "pipeline_status": "SUCCESS",
+  "service_area": {
+    "cities": [
+      "London",
+      "Manchester",
+      "Birmingham",
+      "Leeds",
+      "Liverpool"
+    ],
+    "source": "env",
+    "top": [
+      {
+        "id": 47,
+        "title": "Spurs v Crystal Palace",
+        "date": "2026-10-31",
+        "time": "17:30",
+        "venue": "Tottenham Hotspur Stadium",
+        "city": "London",
+        "score": 91,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Tottenham Hotspur Stadium\u201d",
+        "post_window": {
+          "start": "19:45",
+          "end": "22:15",
+          "type": "departures",
+          "peak": "20:05"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 62850
+      },
+      {
+        "id": 49,
+        "title": "Liverpool v Arsenal",
+        "date": "2026-11-01",
+        "time": "16:30",
+        "venue": "Anfield",
+        "city": "Liverpool",
+        "score": 91,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+        "post_window": {
+          "start": "18:45",
+          "end": "21:15",
+          "type": "departures",
+          "peak": "19:05"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 61276
+      },
+      {
+        "id": 1107,
+        "title": "Liverpool v Arsenal",
+        "date": "2026-11-07",
+        "time": "12:00",
+        "venue": "Anfield",
+        "city": "Liverpool",
+        "score": 91,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+        "post_window": {
+          "start": "14:15",
+          "end": "16:45",
+          "type": "departures",
+          "peak": "14:35"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 61276
+      },
+      {
+        "id": 412,
+        "title": "West Ham United v West Bromwich Albion",
+        "date": "2026-10-31",
+        "time": "15:00",
+        "venue": "London Stadium",
+        "city": "London",
+        "score": 89,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to London Stadium\u201d",
+        "post_window": {
+          "start": "17:15",
+          "end": "19:45",
+          "type": "departures",
+          "peak": "17:35"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 62500
+      },
+      {
+        "id": 3426,
+        "title": "Everton v Coventry",
+        "date": "2026-11-06",
+        "time": "20:00",
+        "venue": "Hill Dickinson Stadium",
+        "city": "Liverpool",
+        "score": 89,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Hill Dickinson Stadium\u201d",
+        "post_window": {
+          "start": "22:15",
+          "end": "00:45",
+          "type": "departures",
+          "peak": "22:35"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 52888
+      }
+    ]
+  },
+  "top_opportunities": [
+    {
+      "id": 47,
+      "title": "Spurs v Crystal Palace",
+      "date": "2026-10-31",
+      "time": "17:30",
+      "venue": "Tottenham Hotspur Stadium",
+      "city": "London",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Tottenham Hotspur Stadium\u201d",
+      "post_window": {
+        "start": "19:45",
+        "end": "22:15",
+        "type": "departures",
+        "peak": "20:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 62850
+    },
+    {
+      "id": 49,
+      "title": "Liverpool v Arsenal",
+      "date": "2026-11-01",
+      "time": "16:30",
+      "venue": "Anfield",
+      "city": "Liverpool",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+      "post_window": {
+        "start": "18:45",
+        "end": "21:15",
+        "type": "departures",
+        "peak": "19:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 61276
+    },
+    {
+      "id": 1107,
+      "title": "Liverpool v Arsenal",
+      "date": "2026-11-07",
+      "time": "12:00",
+      "venue": "Anfield",
+      "city": "Liverpool",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+      "post_window": {
+        "start": "14:15",
+        "end": "16:45",
+        "type": "departures",
+        "peak": "14:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 61276
+    },
+    {
+      "id": 412,
+      "title": "West Ham United v West Bromwich Albion",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "London Stadium",
+      "city": "London",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to London Stadium\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 62500
+    },
+    {
+      "id": 3426,
+      "title": "Everton v Coventry",
+      "date": "2026-11-06",
+      "time": "20:00",
+      "venue": "Hill Dickinson Stadium",
+      "city": "Liverpool",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Hill Dickinson Stadium\u201d",
+      "post_window": {
+        "start": "22:15",
+        "end": "00:45",
+        "type": "departures",
+        "peak": "22:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 52888
+    }
+  ],
+  "today": [
+    {
+      "id": 47,
+      "title": "Spurs v Crystal Palace",
+      "date": "2026-10-31",
+      "time": "17:30",
+      "venue": "Tottenham Hotspur Stadium",
+      "city": "London",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Tottenham Hotspur Stadium\u201d",
+      "post_window": {
+        "start": "19:45",
+        "end": "22:15",
+        "type": "departures",
+        "peak": "20:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 62850
+    },
+    {
+      "id": 412,
+      "title": "West Ham United v West Bromwich Albion",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "London Stadium",
+      "city": "London",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to London Stadium\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 62500
+    },
+    {
+      "id": 1100,
+      "title": "Everton v Manchester United",
+      "date": "2026-10-31",
+      "time": "12:45",
+      "venue": "Goodison Park",
+      "city": "Liverpool",
+      "score": 83,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Goodison Park\u201d",
+      "post_window": {
+        "start": "15:00",
+        "end": "17:30",
+        "type": "departures",
+        "peak": "15:20"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 39414
+    },
+    {
+      "id": 48,
+      "title": "Aston Villa v Fulham",
+      "date": "2026-10-31",
+      "time": "20:00",
+      "venue": "Villa Park",
+      "city": "Birmingham",
+      "score": 82,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Villa Park\u201d",
+      "post_window": {
+        "start": "22:15",
+        "end": "00:45",
+        "type": "departures",
+        "peak": "22:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 42918
+    },
+    {
+      "id": 46,
+      "title": "Man City v Brighton",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "Etihad Stadium",
+      "city": "Manchester",
+      "score": 81,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Etihad Stadium\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 53400
+    },
+    {
+      "id": 3891,
+      "title": "Duran Duran",
+      "date": "2026-10-31",
+      "time": "18:30",
+      "venue": "The O2",
+      "city": "London",
+      "score": 79,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The O2\u201d",
+      "post_window": {
+        "start": "23:00",
+        "end": "01:30",
+        "type": "departures",
+        "peak": "23:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 20000
+    },
+    {
+      "id": 41,
+      "title": "Chelsea v Man Utd",
+      "date": "2026-10-31",
+      "time": "12:30",
+      "venue": "Stamford Bridge",
+      "city": "London",
+      "score": 78,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to Stamford Bridge\u201d",
+      "post_window": {
+        "start": "14:45",
+        "end": "17:15",
+        "type": "departures",
+        "peak": "15:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 40341
+    },
+    {
+      "id": 3916,
+      "title": "The Big 90s Party",
+      "date": "2026-10-31",
+      "time": "23:30",
+      "venue": "The O2",
+      "city": "London",
+      "score": 77,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The O2\u201d",
+      "post_window": {
+        "start": "01:30",
+        "end": "04:00",
+        "type": "departures",
+        "peak": "01:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 20000
+    },
+    {
+      "id": 1300,
+      "title": "Korn",
+      "date": "2026-10-31",
+      "time": "19:00",
+      "venue": "AO Arena",
+      "city": "Manchester",
+      "score": 75,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to AO Arena\u201d",
+      "post_window": {
+        "start": "22:00",
+        "end": "00:30",
+        "type": "departures",
+        "peak": "22:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 23000
+    },
+    {
+      "id": 4319,
+      "title": "Korn",
+      "date": "2026-10-31",
+      "time": "19:20",
+      "venue": "AO Arena",
+      "city": "Manchester",
+      "score": 75,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to AO Arena\u201d",
+      "post_window": {
+        "start": "22:20",
+        "end": "00:50",
+        "type": "departures",
+        "peak": "22:40"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 23000
+    },
+    {
+      "id": 43,
+      "title": "Brentford v Nott'm Forest",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "Brentford Community Stadium",
+      "city": "London",
+      "score": 71,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to Brentford Community Stadium\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 17250
+    },
+    {
+      "id": 409,
+      "title": "Millwall v Derby County",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "The Den",
+      "city": "London",
+      "score": 71,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The Den\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 20146
+    },
+    {
+      "id": 410,
+      "title": "Southampton v Queens Park Rangers",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "St Mary's Stadium",
+      "city": "Southampton",
+      "score": 70,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 32384
+    },
+    {
+      "id": 4313,
+      "title": "Wahala Comedy Clash",
+      "date": "2026-10-31",
+      "time": "17:30",
+      "venue": "The O2",
+      "city": "London",
+      "score": 70,
+      "demand_level": "HIGH",
+      "category": "comedy",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The O2\u201d",
+      "post_window": {
+        "start": "19:30",
+        "end": "22:00",
+        "type": "departures",
+        "peak": "19:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 20000
+    },
+    {
+      "id": 1287,
+      "title": "Tamer Hosny",
+      "date": "2026-10-31",
+      "time": "18:00",
+      "venue": "OVO Arena Wembley",
+      "city": "London",
+      "score": 69,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to OVO Arena Wembley\u201d",
+      "post_window": {
+        "start": "23:00",
+        "end": "01:30",
+        "type": "departures",
+        "peak": "23:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 12500
+    },
+    {
+      "id": 3810,
+      "title": "Paul Heaton",
+      "date": "2026-10-31",
+      "time": "19:30",
+      "venue": "First Direct Arena",
+      "city": "Leeds",
+      "score": 69,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to First Direct Arena\u201d",
+      "post_window": {
+        "start": "21:30",
+        "end": "00:00",
+        "type": "departures",
+        "peak": "21:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 13781
+    },
+    {
+      "id": 405,
+      "title": "Stoke City v Preston North End",
+      "date": "2026-10-31",
+      "time": "12:30",
+      "venue": "bet365 Stadium",
+      "city": "Stoke-on-Trent",
+      "score": 68,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "14:45",
+        "end": "17:15",
+        "type": "departures",
+        "peak": "15:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 30089
+    },
+    {
+      "id": 408,
+      "title": "Middlesbrough v Charlton Athletic",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "Riverside Stadium",
+      "city": "Middlesbrough",
+      "score": 68,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 34742
+    },
+    {
+      "id": 44,
+      "title": "Coventry v Sunderland",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "Coventry Building Society Arena",
+      "city": "Coventry",
+      "score": 66,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 32609
+    },
+    {
+      "id": 413,
+      "title": "Wolverhampton Wanderers v Cardiff City",
+      "date": "2026-10-31",
+      "time": "15:00",
+      "venue": "Molineux Stadium",
+      "city": "Wolverhampton",
+      "score": 66,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 31750
+    }
+  ],
+  "disclaimer": "Scores and demand windows are modelled estimates, not observed taxi demand."
+}
