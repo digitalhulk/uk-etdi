@@ -1,0 +1,767 @@
+2026-11-27 16:21:58,035 | INFO    | jobs | migrated + seeded: {'regions': 0, 'cities': 0, 'venues': 0, 'categories': 0, 'sources': 0}
+2026-11-27 16:21:58,210 | INFO    | pipeline | pipeline run 111 started (scheduled)
+2026-11-27 16:22:05,632 | INFO    | collector.football_fixtures | source=football_fixtures stage=collect status=HEALTHY duration_ms=7277 events=1464 endpoints=10/10 blocked=0
+2026-11-27 16:23:30,465 | INFO    | collector.venue_pages | source=venue_pages stage=collect status=HEALTHY duration_ms=84827 events=1341 endpoints=128/128 blocked=0
+2026-11-27 16:23:32,959 | INFO    | collector.universities | source=universities stage=collect status=HEALTHY duration_ms=2487 events=39 endpoints=2/2 blocked=0
+2026-11-27 16:25:03,481 | INFO    | collector.tourism | source=tourism stage=collect status=DEGRADED duration_ms=90518 events=256 endpoints=96/97 blocked=1
+2026-11-27 16:25:03,485 | INFO    | collector.ical_feeds | source=ical_feeds stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-11-27 16:25:03,488 | INFO    | collector.councils | source=councils stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-11-27 16:25:03,491 | INFO    | collector.colleges | source=colleges stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-11-27 16:25:03,493 | INFO    | collector.rss_feeds | source=rss_feeds stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-11-27 16:25:03,495 | INFO    | collector.schools | source=schools stage=collect status=EMPTY duration_ms=0 events=0 endpoints=0/0 blocked=0
+2026-11-27 16:25:03,497 | INFO    | collector.curated | source=curated stage=collect status=HEALTHY duration_ms=0 events=1 endpoints=0/0 blocked=0
+2026-11-27 16:25:11,248 | INFO    | pipeline | pipeline run 111 finished: SUCCESS in 193.04s
+pipeline run id: 111
+{
+  "generated_for": "2026-11-27",
+  "summary": {
+    "date": "2026-11-27",
+    "events_today": 37,
+    "events_tomorrow": 81,
+    "events_next_7_days": 259,
+    "events_next_30_days": 833,
+    "high": 49,
+    "very_high": 16,
+    "medium": 47,
+    "next_scheduled_run": "2026-11-28T06:00:00+00:00",
+    "data_freshness": {
+      "hours_since_last_success": 0.0,
+      "avg_freshness_score": 76.5,
+      "label": "FRESH"
+    },
+    "new_events": 44,
+    "changed_events": 20,
+    "cancelled_events": 0,
+    "sources_total": 13,
+    "sources_healthy": 10,
+    "sources_empty": 5,
+    "sources_blocked": 0,
+    "source_regressions": [],
+    "open_actions": 720,
+    "horizons": {
+      "today": 35,
+      "7d": 259,
+      "30d": 835,
+      "90d": 1699
+    },
+    "source_silent_events": 632
+  },
+  "by_category_7d": {
+    "arts": 1,
+    "comedy": 4,
+    "community": 88,
+    "education": 9,
+    "festival": 5,
+    "music": 31,
+    "sports": 73,
+    "theatre": 48
+  },
+  "pipeline_status": "SUCCESS",
+  "service_area": {
+    "cities": [
+      "London",
+      "Manchester",
+      "Birmingham",
+      "Leeds",
+      "Liverpool"
+    ],
+    "source": "env",
+    "top": [
+      {
+        "id": 5130,
+        "title": "Ireland v Australia",
+        "date": "2026-11-27",
+        "time": "20:10",
+        "venue": "Twickenham Stadium",
+        "city": "London",
+        "score": 91,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+        "post_window": {
+          "start": "22:25",
+          "end": "00:55",
+          "type": "departures",
+          "peak": "22:45"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 82000
+      },
+      {
+        "id": 87,
+        "title": "Liverpool v Sunderland",
+        "date": "2026-12-02",
+        "time": "19:30",
+        "venue": "Anfield",
+        "city": "Liverpool",
+        "score": 91,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+        "post_window": {
+          "start": "21:45",
+          "end": "00:15",
+          "type": "departures",
+          "peak": "22:05"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 61276
+      },
+      {
+        "id": 471,
+        "title": "West Ham United v Stoke City",
+        "date": "2026-11-28",
+        "time": "15:00",
+        "venue": "London Stadium",
+        "city": "London",
+        "score": 89,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to London Stadium\u201d",
+        "post_window": {
+          "start": "17:15",
+          "end": "19:45",
+          "type": "departures",
+          "peak": "17:35"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 62500
+      },
+      {
+        "id": 5131,
+        "title": "Wales v Japan",
+        "date": "2026-11-28",
+        "time": "13:10",
+        "venue": "Twickenham Stadium",
+        "city": "London",
+        "score": 89,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+        "post_window": {
+          "start": "15:25",
+          "end": "17:55",
+          "type": "departures",
+          "peak": "15:45"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 82000
+      },
+      {
+        "id": 5132,
+        "title": "England v New Zealand",
+        "date": "2026-11-28",
+        "time": "16:40",
+        "venue": "Twickenham Stadium",
+        "city": "London",
+        "score": 89,
+        "demand_level": "VERY_HIGH",
+        "category": "sports",
+        "marketing_priority": "P1",
+        "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+        "post_window": {
+          "start": "18:55",
+          "end": "21:25",
+          "type": "departures",
+          "peak": "19:15"
+        },
+        "quality_level": "MEDIUM",
+        "source_confidence": "TRUSTED",
+        "status": "SCHEDULED",
+        "capacity": 82000
+      }
+    ]
+  },
+  "top_opportunities": [
+    {
+      "id": 5130,
+      "title": "Ireland v Australia",
+      "date": "2026-11-27",
+      "time": "20:10",
+      "venue": "Twickenham Stadium",
+      "city": "London",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+      "post_window": {
+        "start": "22:25",
+        "end": "00:55",
+        "type": "departures",
+        "peak": "22:45"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 82000
+    },
+    {
+      "id": 87,
+      "title": "Liverpool v Sunderland",
+      "date": "2026-12-02",
+      "time": "19:30",
+      "venue": "Anfield",
+      "city": "Liverpool",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Anfield\u201d",
+      "post_window": {
+        "start": "21:45",
+        "end": "00:15",
+        "type": "departures",
+        "peak": "22:05"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 61276
+    },
+    {
+      "id": 471,
+      "title": "West Ham United v Stoke City",
+      "date": "2026-11-28",
+      "time": "15:00",
+      "venue": "London Stadium",
+      "city": "London",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to London Stadium\u201d",
+      "post_window": {
+        "start": "17:15",
+        "end": "19:45",
+        "type": "departures",
+        "peak": "17:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 62500
+    },
+    {
+      "id": 5131,
+      "title": "Wales v Japan",
+      "date": "2026-11-28",
+      "time": "13:10",
+      "venue": "Twickenham Stadium",
+      "city": "London",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+      "post_window": {
+        "start": "15:25",
+        "end": "17:55",
+        "type": "departures",
+        "peak": "15:45"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 82000
+    },
+    {
+      "id": 5132,
+      "title": "England v New Zealand",
+      "date": "2026-11-28",
+      "time": "16:40",
+      "venue": "Twickenham Stadium",
+      "city": "London",
+      "score": 89,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+      "post_window": {
+        "start": "18:55",
+        "end": "21:25",
+        "type": "departures",
+        "peak": "19:15"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 82000
+    }
+  ],
+  "today": [
+    {
+      "id": 5130,
+      "title": "Ireland v Australia",
+      "date": "2026-11-27",
+      "time": "20:10",
+      "venue": "Twickenham Stadium",
+      "city": "London",
+      "score": 91,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+      "post_window": {
+        "start": "22:25",
+        "end": "00:55",
+        "type": "departures",
+        "peak": "22:45"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 82000
+    },
+    {
+      "id": 5129,
+      "title": "Italy v Fiji",
+      "date": "2026-11-27",
+      "time": "16:40",
+      "venue": "Twickenham Stadium",
+      "city": "London",
+      "score": 88,
+      "demand_level": "VERY_HIGH",
+      "category": "sports",
+      "marketing_priority": "P1",
+      "top_action": "Optimise for \u201ctaxi to Twickenham Stadium\u201d",
+      "post_window": {
+        "start": "18:55",
+        "end": "21:25",
+        "type": "departures",
+        "peak": "19:15"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 82000
+    },
+    {
+      "id": 4686,
+      "title": "Fontaines D.C.",
+      "date": "2026-11-27",
+      "time": "18:30",
+      "venue": "The O2",
+      "city": "London",
+      "score": 79,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The O2\u201d",
+      "post_window": {
+        "start": "23:00",
+        "end": "01:30",
+        "type": "departures",
+        "peak": "23:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 20000
+    },
+    {
+      "id": 4758,
+      "title": "Fastlove - The Tribute to George Michael",
+      "date": "2026-11-27",
+      "time": "19:00",
+      "venue": "The O2",
+      "city": "London",
+      "score": 78,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to The O2\u201d",
+      "post_window": {
+        "start": "22:00",
+        "end": "00:30",
+        "type": "departures",
+        "peak": "22:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 20000
+    },
+    {
+      "id": 3637,
+      "title": "Manchester Storm vs Glasgow Clan",
+      "date": "2026-11-27",
+      "time": "19:30",
+      "venue": "AO Arena",
+      "city": "Manchester",
+      "score": 73,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to AO Arena\u201d",
+      "post_window": {
+        "start": "21:45",
+        "end": "00:15",
+        "type": "departures",
+        "peak": "22:05"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 23000
+    },
+    {
+      "id": 462,
+      "title": "Southampton v Middlesbrough",
+      "date": "2026-11-27",
+      "time": "20:00",
+      "venue": "St Mary's Stadium",
+      "city": "Southampton",
+      "score": 72,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "22:15",
+        "end": "00:45",
+        "type": "departures",
+        "peak": "22:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 32384
+    },
+    {
+      "id": 3432,
+      "title": "Nott'm Forest v Chelsea",
+      "date": "2026-11-27",
+      "time": "20:00",
+      "venue": "City Ground",
+      "city": "Nottingham",
+      "score": 72,
+      "demand_level": "HIGH",
+      "category": "sports",
+      "marketing_priority": "P2",
+      "top_action": null,
+      "post_window": {
+        "start": "22:15",
+        "end": "00:45",
+        "type": "departures",
+        "peak": "22:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": 30404
+    },
+    {
+      "id": 5049,
+      "title": "Mariah Carey",
+      "date": "2026-11-27",
+      "time": "19:30",
+      "venue": "Utilita Arena Birmingham",
+      "city": "Birmingham",
+      "score": 69,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to Utilita Arena Birmingham\u201d",
+      "post_window": {
+        "start": "22:30",
+        "end": "01:00",
+        "type": "departures",
+        "peak": "22:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 15800
+    },
+    {
+      "id": 5234,
+      "title": "Paul Smith",
+      "date": "2026-11-27",
+      "time": "18:00",
+      "venue": "OVO Arena Wembley",
+      "city": "London",
+      "score": 69,
+      "demand_level": "HIGH",
+      "category": "music",
+      "marketing_priority": "P2",
+      "top_action": "Optimise for \u201ctaxi to OVO Arena Wembley\u201d",
+      "post_window": {
+        "start": "23:00",
+        "end": "01:30",
+        "type": "departures",
+        "peak": "23:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 12500
+    },
+    {
+      "id": 1833,
+      "title": "Hadestown",
+      "date": "2026-11-27",
+      "time": "19:30",
+      "venue": "Lyric Theatre",
+      "city": "London",
+      "score": 53,
+      "demand_level": "MEDIUM",
+      "category": "theatre",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "22:30",
+        "end": "01:00",
+        "type": "departures",
+        "peak": "22:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 938
+    },
+    {
+      "id": 2124,
+      "title": "Derren Brown: Only Human",
+      "date": "2026-11-27",
+      "time": "19:30",
+      "venue": "Apollo Theatre",
+      "city": "London",
+      "score": 53,
+      "demand_level": "MEDIUM",
+      "category": "theatre",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "22:30",
+        "end": "01:00",
+        "type": "departures",
+        "peak": "22:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 827
+    },
+    {
+      "id": 2347,
+      "title": "SIX",
+      "date": "2026-11-27",
+      "time": "20:00",
+      "venue": "Vaudeville Theatre",
+      "city": "London",
+      "score": 52,
+      "demand_level": "MEDIUM",
+      "category": "theatre",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "22:00",
+        "end": "00:30",
+        "type": "departures",
+        "peak": "22:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 691
+    },
+    {
+      "id": 3366,
+      "title": "Ldn Wrestling",
+      "date": "2026-11-27",
+      "time": "19:00",
+      "venue": "Highfields Centre",
+      "city": "Leicester",
+      "score": 51,
+      "demand_level": "MEDIUM",
+      "category": "sports",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "21:15",
+        "end": "23:45",
+        "type": "departures",
+        "peak": "21:35"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    },
+    {
+      "id": 2188,
+      "title": "Room on the Broom Live On Stage",
+      "date": "2026-11-27",
+      "time": "10:30",
+      "venue": "Lyric Theatre",
+      "city": "London",
+      "score": 50,
+      "demand_level": "MEDIUM",
+      "category": "theatre",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "22:30",
+        "end": "01:00",
+        "type": "departures",
+        "peak": "22:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 938
+    },
+    {
+      "id": 3768,
+      "title": "Crazy Bear\u2019s Legendary Christmas Parties",
+      "date": "2026-11-27",
+      "time": "19:00",
+      "venue": "None",
+      "city": "Oxford",
+      "score": 50,
+      "demand_level": "MEDIUM",
+      "category": "community",
+      "marketing_priority": "P3",
+      "top_action": null,
+      "post_window": {
+        "start": "00:00",
+        "end": "02:30",
+        "type": "departures",
+        "peak": "00:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    },
+    {
+      "id": 2189,
+      "title": "Room on the Broom Live On Stage",
+      "date": "2026-11-27",
+      "time": "13:30",
+      "venue": "Lyric Theatre",
+      "city": "London",
+      "score": 49,
+      "demand_level": "MODERATE",
+      "category": "theatre",
+      "marketing_priority": null,
+      "top_action": null,
+      "post_window": {
+        "start": "01:30",
+        "end": "04:00",
+        "type": "departures",
+        "peak": "01:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "OFFICIAL",
+      "status": "SCHEDULED",
+      "capacity": 938
+    },
+    {
+      "id": 1645,
+      "title": "Fawlty Towers Christmas Special 27/11/2026 Milton Keynes",
+      "date": "2026-11-27",
+      "time": "19:30",
+      "venue": "None",
+      "city": "Oxford",
+      "score": 48,
+      "demand_level": "MODERATE",
+      "category": "community",
+      "marketing_priority": null,
+      "top_action": null,
+      "post_window": {
+        "start": "22:30",
+        "end": "01:00",
+        "type": "departures",
+        "peak": "22:50"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    },
+    {
+      "id": 1646,
+      "title": "Oxford Printmakers Co-operative: Prints Charming",
+      "date": "2026-11-27",
+      "time": "10:00",
+      "venue": "North Wall Arts Centre",
+      "city": "Oxford",
+      "score": 47,
+      "demand_level": "MODERATE",
+      "category": "theatre",
+      "marketing_priority": null,
+      "top_action": null,
+      "post_window": {
+        "start": "16:00",
+        "end": "18:30",
+        "type": "departures",
+        "peak": "16:20"
+      },
+      "quality_level": "HIGH",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    },
+    {
+      "id": 2871,
+      "title": "Word! International Day of People With Disabilities Open Mic Takeover",
+      "date": "2026-11-27",
+      "time": "19:00",
+      "venue": "Attenborough Arts Centre",
+      "city": "Leicester",
+      "score": 45,
+      "demand_level": "MODERATE",
+      "category": "community",
+      "marketing_priority": null,
+      "top_action": null,
+      "post_window": {
+        "start": "22:00",
+        "end": "00:30",
+        "type": "departures",
+        "peak": "22:20"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    },
+    {
+      "id": 3717,
+      "title": "Groovin\u2019 Presents: Teedee +",
+      "date": "2026-11-27",
+      "time": "22:00",
+      "venue": "Club Republic",
+      "city": "Leicester",
+      "score": 45,
+      "demand_level": "MODERATE",
+      "category": "community",
+      "marketing_priority": null,
+      "top_action": null,
+      "post_window": {
+        "start": "01:00",
+        "end": "03:30",
+        "type": "departures",
+        "peak": "01:20"
+      },
+      "quality_level": "MEDIUM",
+      "source_confidence": "TRUSTED",
+      "status": "SCHEDULED",
+      "capacity": null
+    }
+  ],
+  "disclaimer": "Scores and demand windows are modelled estimates, not observed taxi demand."
+}
